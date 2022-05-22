@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"top_tb_time_impl.v" \
+"../../../../../vgatest.src/sim/top_tb.v" \
+
+# Do not sort compile order
+nosort
