@@ -1,6 +1,6 @@
 module imageGenerator (
-	// input is_warning,
-	// input is_fire,
+	input is_warning,
+	input is_fire,
 
 	input			i_clk,
 	input	[10:0]	i_x,
@@ -25,16 +25,16 @@ wire [11:0] douta_w;
 reg [16:0] addra_f=17'b0;
 reg [16:0] addra_w=17'b0;
 
-blk_mem_gen_0 your_instance_name (
+blk_mem_gen_0 fire (
   .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
+  .ena(is_fire),      // input wire ena
   .addra(addra_f),  // input wire [16 : 0] addra
   .douta(douta_f)  // output wire [11 : 0] douta
 );
 
 blk_mem_gen_1 warning (
   .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
+  .ena(is_warning),      // input wire ena
   .addra(addra_w),  // input wire [13 : 0] addra
   .douta(douta_w)  // output wire [11 : 0] douta
 );
@@ -48,6 +48,15 @@ reg [3:0] green	= 4'h0;
 
 //reg [11:0] rgb;
 
+// always @( posedge is_fire ) begin
+// 	addra_f <= 0;
+// 	// addra_w <= 0;
+// end
+
+// always @( posedge is_warning ) begin
+// 	// addra_f <= 0;
+// 	addra_w <= 0;
+// end
 
 always @(posedge pixel_clk) begin
 	// if (i_x < display_x/4) begin
@@ -67,22 +76,29 @@ always @(posedge pixel_clk) begin
 	// red <= rgb[11:8];
 	// green <= rgb[7:4];
 	// blue <= rgb[3:0];
-	if(i_x >= 521 && i_x <= 640  && i_y >= 1 && i_y <= 120) begin //fire region
+	if( is_fire == 0) addra_f = 0;
+	if( is_warning == 0) addra_w = 0;
+	
+	if(i_x >= 521 && i_x <= 640  && i_y >= 1 && i_y <= 120  & is_fire == 1 ) begin //fire region
 		red <= douta_f[11:8];
 		green <= douta_f[7:4];
 		blue <= douta_f[3:0];
 		addra_f = addra_f + 1;
+		// addra_w = 0;
 	end
-	else if(i_x >= 401 && i_x <= 520  && i_y >= 1 && i_y <= 120) begin //warning region
+	else if(i_x >= 401 && i_x <= 520  && i_y >= 1 && i_y <= 120  & is_warning == 1 ) begin //warning region
 			red <= douta_w[11:8];
 			green <= douta_w[7:4];
 			blue <= douta_w[3:0];
 			addra_w = addra_w + 1;
+			// addra_f = 0;
 		end
 		else begin
 			red <= 4'h0;
 			green <= 4'h0;
 			blue <= 4'h0;
+			// addra_f = 0;
+			// addra_w = 0;
 	end
 	if(addra_f == 14400) addra_f = 0;
 	if(addra_w == 14400) addra_w = 0;
