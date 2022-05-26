@@ -25,14 +25,14 @@ module tmp_bcd(
     input  [7:0]  tmp,
 
     output reg [3:0]  tens = 4'b0000,
-    output reg [3:0]  ones = 4'b0000,
-    output reg [3:0]  decimals = 4'b0000
+    output reg [3:0]  ones = 4'b0000
+    // output reg [3:0]  decimals = 4'b0000
     );
 
 always @ (posedge clk) begin
-    tens <= tmp[7:1] / 10;
-    ones <= tmp[7:1] % 10;
-    decimals[3] <= tmp[0]; 
+    tens <= tmp[6:0] / 10;
+    ones <= tmp[6:0] % 10;
+    // decimals[3] <= tmp[0]; 
 end
 
 

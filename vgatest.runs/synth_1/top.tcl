@@ -31,18 +31,24 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo e:/vivado_files/vgatest/vgatest.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files e:/二下/数电/数电大作业/VGA图片/pic2.coe
-add_files e:/二下/数电/数电大作业/VGA图片/pic.coe
+add_files E:/二下/数电/数电大作业/VGA图片/pic2.coe
+add_files E:/二下/数电/数电大作业/VGA图片/pic.coe
+add_files e:/二下/数电/数电大作业/VGA图片/1.coe
 read_verilog -library xil_defaultlib {
+  E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v
   E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v
   E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v
+  E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v
   E:/vivado_files/vgatest/vgatest.src/sources/top.v
 }
 read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

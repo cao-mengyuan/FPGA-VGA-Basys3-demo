@@ -76,7 +76,8 @@ set rc [catch {
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet E:/vivado_files/vgatest/vgatest.runs/synth_1/top.dcp
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0.xci
-  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+  read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
   read_xdc E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
