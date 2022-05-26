@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu May 26 13:38:22 2022
+| Date         : Thu May 26 14:16:58 2022
 | Host         : LAPTOP-NCO9BMV1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -69,8 +69,8 @@ Table of Contents
 |  clk_BUFG            |                       |                            |                1 |              1 |
 |  clk_BUFG            |                       | mod1/hsync0                |                1 |              1 |
 |  clk_BUFG            | mod1/p_1_in           | mod1/vsync                 |                1 |              1 |
-|  pixel_clk           |                       | mod2/addra_w[13]_i_1_n_0   |                2 |              4 |
 |  pixel_clk           |                       | mod2/addra_f[13]_i_1_n_0   |                2 |              4 |
+|  pixel_clk           |                       | mod2/addra_w[13]_i_1_n_0   |                2 |              4 |
 |  pixel_clk           | ct/Is_fire_OBUF       |                            |                1 |              4 |
 |  pixel_clk           | ct/Is_warning_OBUF    |                            |                1 |              4 |
 |  clk_BUFG            |                       | mod1/next_y[9]_i_1_n_0     |                2 |             10 |
@@ -78,12 +78,12 @@ Table of Contents
 |  clk_BUFG            |                       | mod1/next_x[10]_i_1_n_0    |                3 |             11 |
 |  clk_BUFG            |                       | mod1/p_1_in                |                4 |             11 |
 |  pixel_clk           |                       | mod2/blue[3]_i_1_n_0       |                6 |             12 |
-|  pixel_clk           | mod1/next_x_reg[10]_0 | mod1/ones_reg[3]           |                3 |             14 |
 |  pixel_clk           | mod1/next_x_reg[10]_1 |                            |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[10]_2 |                            |                5 |             14 |
+|  pixel_clk           | mod1/next_x_reg[10]_0 | mod1/ones_reg[3]           |                3 |             14 |
+|  pixel_clk           | mod1/next_x_reg[10]_5 | mod2/addra_4_1[13]_i_1_n_0 |                5 |             14 |
 |  pixel_clk           | mod1/next_x_reg[10]_3 | mod2/addra_9_1[13]_i_1_n_0 |                7 |             14 |
 |  pixel_clk           | mod1/next_x_reg[10]_6 | mod2/addra_1_1[13]_i_1_n_0 |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[10]_5 | mod2/addra_4_1[13]_i_1_n_0 |                5 |             14 |
+|  pixel_clk           | mod1/next_x_reg[10]_2 |                            |                5 |             14 |
 |  CLK100MHZ_IBUF_BUFG |                       |                            |                7 |             15 |
 |  pixel_clk           |                       |                            |               17 |             36 |
 +----------------------+-----------------------+----------------------------+------------------+----------------+

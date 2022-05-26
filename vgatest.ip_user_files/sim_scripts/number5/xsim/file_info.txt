@@ -1,0 +1,2 @@
+number5.v,verilog,xil_defaultlib,../../../../vgatest.srcs/sources_1/ip/number5/sim/number5.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

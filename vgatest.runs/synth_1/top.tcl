@@ -37,6 +37,13 @@ add_files E:/二下/数电/数电大作业/VGA图片/pic.coe
 add_files e:/二下/数电/数电大作业/VGA图片/1.coe
 add_files e:/二下/数电/数电大作业/VGA图片/4.coe
 add_files e:/二下/数电/数电大作业/VGA图片/9.coe
+add_files e:/二下/数电/数电大作业/VGA图片/2.coe
+add_files e:/二下/数电/数电大作业/VGA图片/3.coe
+add_files e:/二下/数电/数电大作业/VGA图片/5.coe
+add_files e:/二下/数电/数电大作业/VGA图片/6.coe
+add_files e:/二下/数电/数电大作业/VGA图片/7.coe
+add_files e:/二下/数电/数电大作业/VGA图片/8.coe
+add_files e:/二下/数电/数电大作业/VGA图片/0.coe
 read_verilog -library xil_defaultlib {
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v
   E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v
