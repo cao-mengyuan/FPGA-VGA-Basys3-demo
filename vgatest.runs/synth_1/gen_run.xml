@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1653545748">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1653551837">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -147,9 +147,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="number2"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="number3"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
   <BlockFileSet Type="BlockSrcs" Name="number4"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_2"/>
   <BlockFileSet Type="BlockSrcs" Name="number9"/>
+  <BlockFileSet Type="BlockSrcs" Name="number5"/>
+  <BlockFileSet Type="BlockSrcs" Name="number6"/>
+  <BlockFileSet Type="BlockSrcs" Name="number7"/>
+  <BlockFileSet Type="BlockSrcs" Name="number8"/>
+  <BlockFileSet Type="BlockSrcs" Name="number0"/>
 </GenRun>

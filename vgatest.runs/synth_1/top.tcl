@@ -66,6 +66,27 @@ set_property used_in_implementation false [get_files -all e:/vivado_files/vgates
 read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9_ooc.xdc]
 
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number2/number2.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number2/number2_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0_ooc.xdc]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

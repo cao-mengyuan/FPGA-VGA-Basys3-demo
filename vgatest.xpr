@@ -279,7 +279,6 @@
     <FileSet Name="number2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/number2">
       <File Path="$PSRCDIR/sources_1/ip/number2/number2.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -293,7 +292,6 @@
     <FileSet Name="number3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/number3">
       <File Path="$PSRCDIR/sources_1/ip/number3/number3.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -307,7 +305,6 @@
     <FileSet Name="number5" Type="BlockSrcs" RelSrcDir="$PSRCDIR/number5">
       <File Path="$PSRCDIR/sources_1/ip/number5/number5.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -321,7 +318,6 @@
     <FileSet Name="number6" Type="BlockSrcs" RelSrcDir="$PSRCDIR/number6">
       <File Path="$PSRCDIR/sources_1/ip/number6/number6.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -335,7 +331,6 @@
     <FileSet Name="number7" Type="BlockSrcs" RelSrcDir="$PSRCDIR/number7">
       <File Path="$PSRCDIR/sources_1/ip/number7/number7.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -349,7 +344,6 @@
     <FileSet Name="number8" Type="BlockSrcs" RelSrcDir="$PSRCDIR/number8">
       <File Path="$PSRCDIR/sources_1/ip/number8/number8.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -363,7 +357,6 @@
     <FileSet Name="number0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/number0">
       <File Path="$PSRCDIR/sources_1/ip/number0/number0.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
