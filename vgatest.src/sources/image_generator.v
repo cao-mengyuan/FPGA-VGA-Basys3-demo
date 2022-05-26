@@ -43,14 +43,73 @@ blk_mem_gen_1 warning (
   .douta(douta_w)  // output wire [11 : 0] douta
 );
 
-wire douta_1;
-reg [15:0] addra_1 = 16'b0;
+//数字1显示
+wire douta_1_1;
+reg [13:0] addra_1_1 = 14'b0;
 
-blk_mem_gen_2 num1 (
+blk_mem_gen_2 num1_1 (
   .clka(pixel_clk),    // input wire clka
   .ena(1'b1),      // input wire ena
-  .addra(addra_1),  // input wire [13 : 0] addra
-  .douta(douta_1)  // output wire [0 : 0] douta
+  .addra(addra_1_1),  // input wire [13 : 0] addra
+  .douta(douta_1_1)  // output wire [0 : 0] douta
+);
+
+wire douta_1_2;
+reg [13:0] addra_1_2 = 14'b0;
+
+blk_mem_gen_2 num1_2 (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_1_2),  // input wire [13 : 0] addra
+  .douta(douta_1_2)  // output wire [0 : 0] douta
+);
+
+//数字2显示
+
+
+//-----------------------------------------------------------------------------//
+//数字4显示
+wire douta_4_1;
+reg [13:0] addra_4_1 = 14'b0;
+
+number4 num4_1 (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_4_1),  // input wire [13 : 0] addra
+  .douta(douta_4_1)  // output wire [0 : 0] douta
+);
+
+wire douta_4_2;
+reg [13:0] addra_4_2 = 14'b0;
+
+number4 num4_2 (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_4_2),  // input wire [13 : 0] addra
+  .douta(douta_4_2)  // output wire [0 : 0] douta
+);
+
+//-----------------------------------------------------------------------------//
+
+//数字9显示
+wire douta_9_1;
+reg [13:0] addra_9_1 = 14'b0;
+
+number9 num9_1 (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_9_1),  // input wire [13 : 0] addra
+  .douta(douta_9_1)  // output wire [0 : 0] douta
+);
+
+wire douta_9_2;
+reg [13:0] addra_9_2 = 14'b0;
+
+number9 num9_2 (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_9_2),  // input wire [13 : 0] addra
+  .douta(douta_9_2)  // output wire [0 : 0] douta
 );
 //-----------------------------------------------------------------------------//
 
@@ -118,27 +177,107 @@ always @(posedge pixel_clk) begin
 	else if(i_x >= 321 && i_x <= 400  && i_y >= 151 && i_y <= 270)
 			case(tens)
 				4'd1: begin
-					if(douta_1 == 1)begin
-						red <= 4'h0;
-						green <= 4'h0;
-						blue <= 4'h0;
-						addra_1 <= addra_1 + 1;
-					end
+					if(douta_1_1 == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
 					else begin
 						red <= tmp_color_red;
 						green <= tmp_color_green;
 						blue <= tmp_color_blue;
-						addra_1 <= addra_1 + 1;
 					end
+					addra_1_1 <= addra_1_1 + 1;
+					addra_4_1 <= 0;
+					addra_9_1 <= 0;
 				end
-				default: begin 
-					red <= 4'hf;
-					green <= 4'hf;
-					blue <= 4'hf;
-					addra_1 <= 0;
+				// 4'd2: begin
+				// 	if(douta_1 == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+				// 	else begin
+						
+				// 	end
+
+				// 	end
+
+				4'd4: begin 
+					if(douta_4_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					else begin
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
 					end
+					addra_4_1 <= addra_4_1 + 1;
+					addra_1_1 <= 0;
+					addra_9_1 <= 0;
+				end
+
+				4'd9: begin 
+					if(douta_9_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					else begin
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
+					end
+					addra_9_1 <= addra_9_1 + 1;
+					addra_1_1 <= 0;
+					addra_4_1 <= 0;
+				end
+
+				default: begin 
+					red <= 4'hf; green <= 4'hf; blue <= 4'hf;
+					addra_1_1 <= 0;
+					addra_4_1 <= 0;
+					addra_9_1 <= 0;
+				end
 			endcase
 
+	else if(i_x >= 401 && i_x <= 480  && i_y >= 151 && i_y <= 270)
+		case(ones)
+				4'd1: begin
+					if(douta_1_2 == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					else begin 
+						red <= tmp_color_red;  
+						green <= tmp_color_green;  
+						blue <= tmp_color_blue;  
+					end
+					addra_1_2 <= addra_1_2 + 1;
+					addra_4_2 <= 0;
+					addra_9_2 <= 0;
+				end
+				// 4'd2: begin
+				// 	if(douta_1 == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+				// 	else begin
+						
+				// 	end
+
+				// 	end
+				4'd4: begin
+					if(douta_4_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					else begin
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
+					end
+					addra_4_2 <= addra_4_2 + 1;
+					addra_1_2 <= 0;
+					addra_9_2 <= 0;
+				end
+
+				4'd9: begin 
+					if(douta_9_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					else begin
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
+					end
+					addra_9_2 <= addra_9_2 + 1;
+					addra_1_2 <= 0;
+					addra_4_2 <= 0;
+				end
+
+				default: begin 
+					red <= 4'hf; green <= 4'hf; blue <= 4'hf;
+					addra_1_2 <= 0;
+					addra_4_2 <= 0;
+					addra_9_2 <= 0;
+					end
+			endcase
 
 
 	else begin
@@ -151,7 +290,15 @@ always @(posedge pixel_clk) begin
 	if(addra_f == 14400) addra_f = 0;
 	if(addra_w == 14400) addra_w = 0;
 
-	if(addra_1 == 9600) addra_1 = 0;
+	if(addra_1_1 == 9600) addra_1_1 = 0;
+	if(addra_1_2 == 9600) addra_1_2 = 0;
+
+	if(addra_4_1 == 9600) addra_4_1 = 0;
+	if(addra_4_2 == 9600) addra_4_2 = 0;
+
+	if(addra_9_1 == 9600) addra_9_1 = 0;
+	if(addra_9_2 == 9600) addra_9_2 = 0;
+
 
 end
 

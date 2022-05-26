@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,6 +35,8 @@ set_property ip_cache_permissions {read write} [current_project]
 add_files E:/二下/数电/数电大作业/VGA图片/pic2.coe
 add_files E:/二下/数电/数电大作业/VGA图片/pic.coe
 add_files e:/二下/数电/数电大作业/VGA图片/1.coe
+add_files e:/二下/数电/数电大作业/VGA图片/4.coe
+add_files e:/二下/数电/数电大作业/VGA图片/9.coe
 read_verilog -library xil_defaultlib {
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v
   E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v
@@ -49,6 +52,12 @@ set_property used_in_implementation false [get_files -all e:/vivado_files/vgates
 
 read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

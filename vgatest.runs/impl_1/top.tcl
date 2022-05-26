@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -78,6 +79,8 @@ set rc [catch {
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0.xci
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
   read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
+  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4.xci
+  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9.xci
   read_xdc E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

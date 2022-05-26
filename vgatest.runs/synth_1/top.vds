@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu May 26 11:28:03 2022
-# Process ID: 16348
+# Start of session at: Thu May 26 13:37:18 2022
+# Process ID: 18000
 # Current directory: E:/vivado_files/vgatest/vgatest.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: E:/vivado_files/vgatest/vgatest.runs/synth_1/top.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13512 
+INFO: Helper process launched with PID 9556 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 420.500 ; gain = 103.070
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 420.762 ; gain = 102.891
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
 INFO: [Synth 8-6157] synthesizing module 'clock_vga' [E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v:3]
@@ -36,31 +36,35 @@ INFO: [Synth 8-6157] synthesizing module 'imageGenerator' [E:/vivado_files/vgate
 	Parameter tmp_color_blue bound to: 4'b1111 
 	Parameter tmp_color_red bound to: 4'b1111 
 	Parameter tmp_color_green bound to: 4'b1111 
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16348-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (2#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16348-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (2#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:35]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16348-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (3#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16348-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (3#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:42]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16348-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (4#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16348-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_2_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_2' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:52]
-WARNING: [Synth 8-6090] variable 'addra_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:154]
-INFO: [Synth 8-6155] done synthesizing module 'imageGenerator' (5#1) [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (4#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number4' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number4' (5#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number9' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number9' (6#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-18000-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
+WARNING: [Synth 8-6090] variable 'addra_1_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:293]
+WARNING: [Synth 8-6090] variable 'addra_1_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:294]
+WARNING: [Synth 8-6090] variable 'addra_4_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:296]
+WARNING: [Synth 8-6090] variable 'addra_4_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:297]
+WARNING: [Synth 8-6090] variable 'addra_9_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:299]
+WARNING: [Synth 8-6090] variable 'addra_9_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:300]
+INFO: [Synth 8-6155] done synthesizing module 'imageGenerator' (7#1) [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'calcu_tmp' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v:23]
 	Parameter Warning_threshold bound to: 8'b01000000 
 	Parameter Fire_threshold bound to: 8'b10000000 
-INFO: [Synth 8-6155] done synthesizing module 'calcu_tmp' (6#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'calcu_tmp' (8#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v:23]
 INFO: [Synth 8-6157] synthesizing module 'tmp_bcd' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'tmp_bcd' (7#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'top' (8#1) [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'tmp_bcd' (9#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
 WARNING: [Synth 8-3331] design tmp_bcd has unconnected port tmp[7]
-WARNING: [Synth 8-3331] design imageGenerator has unconnected port ones[3]
-WARNING: [Synth 8-3331] design imageGenerator has unconnected port ones[2]
-WARNING: [Synth 8-3331] design imageGenerator has unconnected port ones[1]
-WARNING: [Synth 8-3331] design imageGenerator has unconnected port ones[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 476.266 ; gain = 158.836
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 476.773 ; gain = 158.902
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -73,10 +77,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 476.266 ; gain = 158.836
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 476.773 ; gain = 158.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 476.266 ; gain = 158.836
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 476.773 ; gain = 158.902
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -87,44 +91,71 @@ Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'mod2/fire'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'mod2/warning'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'mod2/warning'
-Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'mod2/num1'
-Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'mod2/num1'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'mod2/num1_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'mod2/num1_1'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'mod2/num1_2'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'mod2/num1_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4/number4_in_context.xdc] for cell 'mod2/num4_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4/number4_in_context.xdc] for cell 'mod2/num4_1'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4/number4_in_context.xdc] for cell 'mod2/num4_2'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4/number4_in_context.xdc] for cell 'mod2/num4_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_1'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_2'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_2'
 Parsing XDC File [E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc]
 Finished Parsing XDC File [E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 805.422 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 808.008 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 805.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 808.043 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 805.473 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 805.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 808.043 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 808.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 805.473 ; gain = 488.043
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 808.043 ; gain = 490.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 805.473 ; gain = 488.043
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 808.043 ; gain = 490.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for mod2/fire. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/warning. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for mod2/num1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num1_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num1_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num4_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num4_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num9_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num9_2. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 805.473 ; gain = 488.043
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 808.043 ; gain = 490.172
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "addra_1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "addra_1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "addra_1_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_4_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_9_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_1_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_4_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_9_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_1_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_4_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_9_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_1_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_4_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_9_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 805.473 ; gain = 488.043
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 808.043 ; gain = 490.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -138,22 +169,26 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     17 Bit       Adders := 2     
-	   2 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 6     
 	   2 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 2     
 +---Registers : 
 	               17 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 6     
 	               11 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
 	                4 Bit    Registers := 5     
 	                1 Bit    Registers := 9     
 +---Muxes : 
 	   2 Input     17 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 3     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 5     
+	   5 Input     14 Bit        Muxes := 3     
+	   4 Input     14 Bit        Muxes := 6     
+	   2 Input     14 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 13    
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 15    
+	   5 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -178,18 +213,22 @@ Module imageGenerator
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     17 Bit       Adders := 2     
-	   2 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 6     
 +---Registers : 
 	               17 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 6     
 	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     17 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 3     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 5     
+	   5 Input     14 Bit        Muxes := 3     
+	   4 Input     14 Bit        Muxes := 6     
+	   2 Input     14 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 10    
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 15    
+	   5 Input      1 Bit        Muxes := 3     
 Module calcu_tmp 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -214,9 +253,14 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "mod2/addra_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mod2/addra_1_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mod2/addra_4_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mod2/addra_9_2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mod2/addra_1_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mod2/addra_4_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mod2/addra_9_1" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 805.473 ; gain = 488.043
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 808.043 ; gain = 490.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -228,13 +272,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 805.473 ; gain = 488.043
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 808.043 ; gain = 490.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 805.473 ; gain = 488.043
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 808.043 ; gain = 490.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,7 +290,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -270,7 +314,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -283,7 +327,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -295,25 +339,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -325,61 +369,69 @@ Report BlackBoxes:
 +------+--------------+----------+
 |1     |blk_mem_gen_0 |         1|
 |2     |blk_mem_gen_1 |         1|
-|3     |blk_mem_gen_2 |         1|
+|3     |blk_mem_gen_2 |         2|
+|4     |number4       |         2|
+|5     |number9       |         2|
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+--------------+------+
-|      |Cell          |Count |
-+------+--------------+------+
-|1     |blk_mem_gen_0 |     1|
-|2     |blk_mem_gen_1 |     1|
-|3     |blk_mem_gen_2 |     1|
-|4     |BUFG          |     3|
-|5     |CARRY4        |    14|
-|6     |LUT1          |     4|
-|7     |LUT2          |    73|
-|8     |LUT3          |    10|
-|9     |LUT4          |    20|
-|10    |LUT5          |    29|
-|11    |LUT6          |    27|
-|12    |FDRE          |   117|
-|13    |IBUF          |     8|
-|14    |OBUF          |    16|
-+------+--------------+------+
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |blk_mem_gen_0    |     1|
+|2     |blk_mem_gen_1    |     1|
+|3     |blk_mem_gen_2    |     1|
+|4     |blk_mem_gen_2__2 |     1|
+|5     |number4          |     1|
+|6     |number4__2       |     1|
+|7     |number9          |     1|
+|8     |number9__2       |     1|
+|9     |BUFG             |     3|
+|10    |CARRY4           |    34|
+|11    |LUT1             |     4|
+|12    |LUT2             |    74|
+|13    |LUT3             |    11|
+|14    |LUT4             |    37|
+|15    |LUT5             |    58|
+|16    |LUT6             |    75|
+|17    |FDRE             |   177|
+|18    |FDSE             |    12|
+|19    |IBUF             |     9|
+|20    |OBUF             |    16|
++------+-----------------+------+
 
 Report Instance Areas: 
 +------+---------+---------------+------+
 |      |Instance |Module         |Cells |
 +------+---------+---------------+------+
-|1     |top      |               |   346|
+|1     |top      |               |   540|
 |2     |  ct     |calcu_tmp      |    47|
-|3     |  mod1   |clock_vga      |   126|
-|4     |  mod2   |imageGenerator |   136|
-|5     |  tb     |tmp_bcd        |    10|
+|3     |  mod1   |clock_vga      |   155|
+|4     |  mod2   |imageGenerator |   247|
+|5     |  tb     |tmp_bcd        |    63|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 816.324 ; gain = 498.895
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 816.324 ; gain = 169.688
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 816.324 ; gain = 498.895
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 822.500 ; gain = 173.359
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 822.500 ; gain = 504.629
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 816.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 822.500 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-31 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 816.324 ; gain = 510.410
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 816.324 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 822.500 ; gain = 516.148
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 822.500 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'E:/vivado_files/vgatest/vgatest.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu May 26 11:28:39 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu May 26 13:37:47 2022...
