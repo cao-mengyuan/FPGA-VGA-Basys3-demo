@@ -43,6 +43,15 @@ blk_mem_gen_1 warning (
   .douta(douta_w)  // output wire [11 : 0] douta
 );
 
+reg [16:0] addra_c = 17'b0;
+wire douta_c;
+blk_mem_gen_3 centigrade (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_c),  // input wire [13 : 0] addra
+  .douta(douta_c)  // output wire [0 : 0] douta
+);
+
 //---------------------------------------------------------------------------//
 
 //数字0显示
@@ -71,7 +80,7 @@ number0 num0_2 (
 wire douta_1_1;
 reg [13:0] addra_1_1 = 14'b0;
 
-blk_mem_gen_2 num1_1 (
+number1 num1_1 (
   .clka(pixel_clk),    // input wire clka
   .ena(1'b1),      // input wire ena
   .addra(addra_1_1),  // input wire [13 : 0] addra
@@ -81,7 +90,7 @@ blk_mem_gen_2 num1_1 (
 wire douta_1_2;
 reg [13:0] addra_1_2 = 14'b0;
 
-blk_mem_gen_2 num1_2 (
+number1 num1_2 (
   .clka(pixel_clk),    // input wire clka
   .ena(1'b1),      // input wire ena
   .addra(addra_1_2),  // input wire [13 : 0] addra
@@ -346,7 +355,7 @@ always @(posedge pixel_clk) begin
 				end
 
 				4'd1: begin
-					if(douta_1_1 == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					if(douta_1_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
 					else begin
 						red <= tmp_color_red;
 						green <= tmp_color_green;
@@ -487,7 +496,7 @@ always @(posedge pixel_clk) begin
 				end
 
 				4'd1: begin
-					if(douta_1_2 == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					if(douta_1_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
 					else begin 
 						red <= tmp_color_red;  
 						green <= tmp_color_green;  
@@ -613,6 +622,15 @@ always @(posedge pixel_clk) begin
 					end
 			endcase
 
+	else if( i_x >= 501 && i_x <= 620 && i_y >= 151 && i_y <= 270 ) begin
+				if(douta_c == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+				else begin
+					red <= tmp_color_red;
+					green <= tmp_color_green;
+					blue <= tmp_color_blue;
+				end
+				addra_c <= addra_c + 1;
+			end
 
 	else begin
 		red <= 4'h0;
@@ -620,7 +638,7 @@ always @(posedge pixel_clk) begin
 		blue <= 4'h0;
 	end
 
-
+	if(addra_c == 14400) addra_c = 0;
 	if(addra_f == 14400) addra_f = 0;
 	if(addra_w == 14400) addra_w = 0;
 

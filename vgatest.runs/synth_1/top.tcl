@@ -44,6 +44,7 @@ add_files e:/二下/数电/数电大作业/VGA图片/6.coe
 add_files e:/二下/数电/数电大作业/VGA图片/7.coe
 add_files e:/二下/数电/数电大作业/VGA图片/8.coe
 add_files e:/二下/数电/数电大作业/VGA图片/0.coe
+add_files e:/二下/数电/数电大作业/VGA图片/centigrade.coe
 read_verilog -library xil_defaultlib {
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v
   E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v
@@ -51,14 +52,14 @@ read_verilog -library xil_defaultlib {
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v
   E:/vivado_files/vgatest/vgatest.src/sources/top.v
 }
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3_ooc.xdc]
+
 read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0_ooc.xdc]
 
 read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
-
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
-set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
 
 read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4_ooc.xdc]
@@ -87,6 +88,9 @@ set_property used_in_implementation false [get_files -all e:/vivado_files/vgates
 read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0_ooc.xdc]
 
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1_ooc.xdc]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -98,6 +102,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc
 set_property used_in_implementation false [get_files E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
