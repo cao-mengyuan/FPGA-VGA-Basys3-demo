@@ -638,6 +638,23 @@ always @(posedge pixel_clk) begin
 		blue <= 4'h0;
 	end
 
+	if( i_x == 1 && i_y == 1 )begin
+
+			addra_0_1 <= 0;    
+			addra_1_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
+			addra_4_1 <= 0;    addra_6_1 <= 0;    addra_5_1 <= 0;
+			addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+
+			addra_0_2 <= 0;
+			addra_1_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
+			addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;    
+			addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+
+			addra_c <= 0;
+			addra_w <= 0;
+			addra_f <= 0;
+		end
+
 	if(addra_c == 14400) addra_c = 0;
 	if(addra_f == 14400) addra_f = 0;
 	if(addra_w == 14400) addra_w = 0;

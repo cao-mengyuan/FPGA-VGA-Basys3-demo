@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu May 26 16:39:39 2022
+| Date         : Thu May 26 18:04:36 2022
 | Host         : LAPTOP-NCO9BMV1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    35 |
-| Unused register locations in slices containing registers |   115 |
+| Number of unique control sets                            |    41 |
+| Unused register locations in slices containing registers |   145 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,14 +34,14 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            3 |
-|      4 |            4 |
+|      1 |            5 |
+|      4 |            2 |
+|      8 |            1 |
 |     10 |            2 |
 |     11 |            2 |
-|     12 |            1 |
+|     12 |            2 |
 |     14 |           20 |
-|     15 |            1 |
-|    16+ |            2 |
+|    16+ |            7 |
 +--------+--------------+
 
 
@@ -51,56 +51,62 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              84 |           36 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              53 |           21 |
-| Yes          | No                    | No                     |               8 |            2 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             308 |          118 |
+| No           | No                    | No                     |              49 |           28 |
+| No           | No                    | Yes                    |              38 |           17 |
+| No           | Yes                   | No                     |             106 |           40 |
+| Yes          | No                    | No                     |               8 |            3 |
+| Yes          | No                    | Yes                    |              18 |            7 |
+| Yes          | Yes                   | No                     |             308 |           95 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+--------------------------+----------------------------+------------------+----------------+
-|     Clock Signal     |       Enable Signal      |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
-+----------------------+--------------------------+----------------------------+------------------+----------------+
-|  clk_BUFG            |                          |                            |                1 |              1 |
-|  clk_BUFG            |                          | mod1/hsync0                |                1 |              1 |
-|  clk_BUFG            | mod1/p_1_in              | mod1/vsync                 |                1 |              1 |
-|  pixel_clk           | ct/Is_warning_OBUF       |                            |                1 |              4 |
-|  pixel_clk           | ct/Is_fire_OBUF          |                            |                1 |              4 |
-|  pixel_clk           |                          | mod2/addra_f[13]_i_1_n_0   |                2 |              4 |
-|  pixel_clk           |                          | mod2/addra_w[13]_i_1_n_0   |                2 |              4 |
-|  clk_BUFG            |                          | mod1/next_y[9]_i_1_n_0     |                2 |             10 |
-|  clk_BUFG            | mod1/p_1_in              | mod1/y_0                   |                4 |             10 |
-|  clk_BUFG            |                          | mod1/next_x[10]_i_1_n_0    |                4 |             11 |
-|  clk_BUFG            |                          | mod1/p_1_in                |                4 |             11 |
-|  pixel_clk           |                          | mod1/next_x_reg[10]_0      |                6 |             12 |
-|  pixel_clk           | mod1/next_x_reg[7]_2     | mod2/addra_8_1[13]_i_1_n_0 |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_2     | mod2/addra_8_2[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_10    | mod2/addra_0_2[13]_i_1_n_0 |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_1     | mod2/addra_9_1[13]_i_1_n_0 |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_10    | mod2/addra_0_1[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_4     | mod2/addra_6_2[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_6     | mod2/addra_4_1[13]_i_1_n_0 |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_9     | mod2/addra_1_1[13]_i_1_n_0 |                7 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_7     | mod2/addra_3_1[13]_i_1_n_0 |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_8     | mod2/addra_2_2[13]_i_1_n_0 |                6 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_5     | mod2/addra_5_1[13]_i_1_n_0 |                4 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_4     | mod2/addra_6_1[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_1     | mod2/addra_9_2[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_3     | mod2/addra_7_1[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_9     | mod2/addra_1_2[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_5     | mod2/addra_5_2[13]_i_1_n_0 |                4 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_7     | mod2/addra_3_2[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[7]_8     | mod2/addra_2_1[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_3     | mod2/addra_7_2[13]_i_1_n_0 |                5 |             14 |
-|  pixel_clk           | mod1/next_x_reg[9]_6     | mod2/addra_4_2[13]_i_1_n_0 |                7 |             14 |
-|  CLK100MHZ_IBUF_BUFG |                          |                            |                6 |             15 |
-|  pixel_clk           | mod2/addra_c[16]_i_2_n_0 | mod2/addra_c[16]_i_1_n_0   |                5 |             17 |
-|  pixel_clk           |                          |                            |               29 |             68 |
-+----------------------+--------------------------+----------------------------+------------------+----------------+
++----------------------+------------------------------------+-----------------------------------+------------------+----------------+
+|     Clock Signal     |            Enable Signal           |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++----------------------+------------------------------------+-----------------------------------+------------------+----------------+
+|  clk_BUFG            |                                    |                                   |                1 |              1 |
+|  clk_BUFG            |                                    | mod1/hsync0                       |                1 |              1 |
+|  dri_clk_OBUF_BUFG   | inst_i2c_dri/i2c_done_i_1_n_0      | inst_i2c_dri/cur_state[7]_i_2_n_0 |                1 |              1 |
+|  dri_clk_OBUF_BUFG   | inst_i2c_dri/scl_i_1_n_0           | inst_i2c_dri/cur_state[7]_i_2_n_0 |                1 |              1 |
+|  clk_BUFG            | mod1/p_1_in                        | mod1/vsync                        |                1 |              1 |
+|  pixel_clk           | ct/Is_warning_OBUF                 |                                   |                1 |              4 |
+|  pixel_clk           | ct/Is_fire_OBUF                    |                                   |                2 |              4 |
+|  tc/change_clk       |                                    |                                   |                2 |              8 |
+|  clk_BUFG            |                                    | mod1/next_y[9]_i_1_n_0            |                4 |             10 |
+|  clk_BUFG            | mod1/p_1_in                        | mod1/y_0                          |                3 |             10 |
+|  clk_BUFG            |                                    | mod1/next_x[10]_i_1_n_0           |                4 |             11 |
+|  clk_BUFG            |                                    | mod1/p_1_in                       |                4 |             11 |
+|  pixel_clk           |                                    | mod1/tens_reg[2]                  |                6 |             12 |
+|  CLK100MHZ_IBUF_BUFG |                                    | inst_i2c_dri/cur_state[7]_i_2_n_0 |                4 |             12 |
+|  pixel_clk           | mod1/next_x_reg[7]_7[0]            | mod1/SR[0]                        |                5 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_21[0]           | mod1/SR[0]                        |                3 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_5[0]            | mod1/SR[0]                        |                5 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_9[0]            | mod1/SR[0]                        |                6 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_10[0]           | mod1/SR[0]                        |                5 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_2[0]            | mod1/SR[0]                        |                7 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_3[0]            | mod1/SR[0]                        |                7 |             14 |
+|  pixel_clk           | mod1/E[0]                          | mod1/SR[0]                        |                2 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_6[0]            | mod1/SR[0]                        |                5 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_8[0]            | mod1/SR[0]                        |                6 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_14[0]           | mod1/SR[0]                        |                4 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_4[0]            | mod1/SR[0]                        |                5 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_19[0]           | mod1/SR[0]                        |                4 |             14 |
+|  pixel_clk           | mod1/next_x_reg[7]_11[0]           | mod1/SR[0]                        |                6 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_13[0]           | mod1/SR[0]                        |                2 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_16[0]           | mod1/SR[0]                        |                3 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_17[0]           | mod1/SR[0]                        |                3 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_15[0]           | mod1/SR[0]                        |                3 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_18[0]           | mod1/SR[0]                        |                3 |             14 |
+|  pixel_clk           | mod1/next_x_reg[9]_20[0]           | mod1/SR[0]                        |                3 |             14 |
+|  dri_clk_OBUF_BUFG   | inst_i2c_dri/i2c_r_data[7]_i_1_n_0 | inst_i2c_dri/cur_state[7]_i_2_n_0 |                5 |             16 |
+|  pixel_clk           | mod2/addra_c[16]_i_2_n_0           | mod1/SR[0]                        |                4 |             17 |
+|  CLK100MHZ_IBUF_BUFG |                                    |                                   |                6 |             18 |
+|  pixel_clk           |                                    |                                   |               19 |             22 |
+|  dri_clk_OBUF_BUFG   |                                    | inst_i2c_dri/cur_state[7]_i_2_n_0 |               13 |             26 |
+|  CLK100MHZ_IBUF_BUFG |                                    | tc/change_clk_0                   |                7 |             27 |
+|  pixel_clk           |                                    | mod1/SR[0]                        |               14 |             34 |
++----------------------+------------------------------------+-----------------------------------+------------------+----------------+
 
 

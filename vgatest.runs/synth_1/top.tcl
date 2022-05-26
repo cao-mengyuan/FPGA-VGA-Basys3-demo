@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,25 +33,27 @@ set_property ip_output_repo e:/vivado_files/vgatest/vgatest.cache/ip [current_pr
 set_property ip_cache_permissions {read write} [current_project]
 add_files E:/二下/数电/数电大作业/VGA图片/pic2.coe
 add_files E:/二下/数电/数电大作业/VGA图片/pic.coe
-add_files e:/二下/数电/数电大作业/VGA图片/1.coe
-add_files e:/二下/数电/数电大作业/VGA图片/4.coe
-add_files e:/二下/数电/数电大作业/VGA图片/9.coe
-add_files e:/二下/数电/数电大作业/VGA图片/2.coe
-add_files e:/二下/数电/数电大作业/VGA图片/3.coe
-add_files e:/二下/数电/数电大作业/VGA图片/5.coe
-add_files e:/二下/数电/数电大作业/VGA图片/6.coe
-add_files e:/二下/数电/数电大作业/VGA图片/7.coe
-add_files e:/二下/数电/数电大作业/VGA图片/8.coe
-add_files e:/二下/数电/数电大作业/VGA图片/0.coe
-add_files e:/二下/数电/数电大作业/VGA图片/centigrade.coe
+add_files E:/二下/数电/数电大作业/VGA图片/1.coe
+add_files E:/二下/数电/数电大作业/VGA图片/4.coe
+add_files E:/二下/数电/数电大作业/VGA图片/9.coe
+add_files E:/二下/数电/数电大作业/VGA图片/2.coe
+add_files E:/二下/数电/数电大作业/VGA图片/3.coe
+add_files E:/二下/数电/数电大作业/VGA图片/5.coe
+add_files E:/二下/数电/数电大作业/VGA图片/6.coe
+add_files E:/二下/数电/数电大作业/VGA图片/7.coe
+add_files E:/二下/数电/数电大作业/VGA图片/8.coe
+add_files E:/二下/数电/数电大作业/VGA图片/0.coe
+add_files E:/二下/数电/数电大作业/VGA图片/centigrade.coe
 read_verilog -library xil_defaultlib {
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v
   E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v
+  E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/i2c_dri.v
   E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v
+  E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_change.v
   E:/vivado_files/vgatest/vgatest.src/sources/top.v
 }
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3_ooc.xdc]
 
 read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0.xci
@@ -61,34 +62,34 @@ set_property used_in_implementation false [get_files -all e:/vivado_files/vgates
 read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number2/number2.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number2/number2.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number2/number2_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0_ooc.xdc]
 
-read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1.xci
+read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
