@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu May 26 18:02:33 2022
-# Process ID: 20148
+# Start of session at: Fri May 27 16:25:53 2022
+# Process ID: 16432
 # Current directory: E:/vivado_files/vgatest/vgatest.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: E:/vivado_files/vgatest/vgatest.runs/synth_1/top.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14008 
+INFO: Helper process launched with PID 10648 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 425.555 ; gain = 105.336
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 425.402 ; gain = 105.285
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
 INFO: [Synth 8-6157] synthesizing module 'clock_vga' [E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v:3]
@@ -36,35 +36,35 @@ INFO: [Synth 8-6157] synthesizing module 'imageGenerator' [E:/vivado_files/vgate
 	Parameter tmp_color_blue bound to: 4'b1111 
 	Parameter tmp_color_red bound to: 4'b1111 
 	Parameter tmp_color_green bound to: 4'b1111 
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (2#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (2#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:35]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (3#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (3#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:42]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (4#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (4#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_3' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:51]
-INFO: [Synth 8-6157] synthesizing module 'number0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number0' (5#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number1' (6#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number2' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number2' (7#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number3' (8#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number4' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number4' (9#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number5' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number5' (10#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number6' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number6' (11#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number7' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number7' (12#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number8' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number8' (13#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number9' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number9' (14#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-20148-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number0' (5#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number1' (6#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number2' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number2' (7#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number3' (8#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number4' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number4' (9#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number5' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number5' (10#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number6' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number6' (11#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number7' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number7' (12#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number8' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number8' (13#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number9' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number9' (14#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-16432-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
 WARNING: [Synth 8-6090] variable 'addra_w' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:654]
 WARNING: [Synth 8-6090] variable 'addra_f' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:655]
 WARNING: [Synth 8-6090] variable 'addra_c' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:658]
@@ -115,7 +115,7 @@ INFO: [Synth 8-6155] done synthesizing module 'tmp_change' (19#1) [E:/vivado_fil
 INFO: [Synth 8-6155] done synthesizing module 'top' (20#1) [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
 WARNING: [Synth 8-3331] design tmp_bcd has unconnected port tmp[7]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 483.406 ; gain = 163.188
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 482.605 ; gain = 162.488
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -128,10 +128,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 483.406 ; gain = 163.188
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 482.605 ; gain = 162.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 483.406 ; gain = 163.188
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 482.605 ; gain = 162.488
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -190,24 +190,24 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [E:/vivado_files/vgatest/vgatest.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [E:/vivado_files/vgatest/vgatest.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 824.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 824.047 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.117 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.020 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 824.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 824.117 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 824.020 ; gain = 503.801
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 824.117 ; gain = 504.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 824.020 ; gain = 503.801
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 824.117 ; gain = 504.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -236,7 +236,7 @@ Applied set_property DONT_TOUCH = true for mod2/num0_2. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for mod2/num1_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num1_2. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 824.020 ; gain = 503.801
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 824.117 ; gain = 504.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "addra_0_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_1_1" won't be mapped to RAM because it is too sparse
@@ -328,7 +328,7 @@ INFO: [Synth 8-5545] ROM "change_clk" won't be mapped to RAM because address siz
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in module 'i2c_dri'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 824.020 ; gain = 503.801
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 824.117 ; gain = 504.000
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -357,7 +357,7 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 4     
 	                7 Bit    Registers := 2     
 	                4 Bit    Registers := 5     
-	                1 Bit    Registers := 17    
+	                1 Bit    Registers := 18    
 +---Muxes : 
 	   2 Input     28 Bit        Muxes := 1     
 	   6 Input     17 Bit        Muxes := 1     
@@ -397,6 +397,8 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module top 
 Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 3     
 Module clock_vga 
@@ -563,7 +565,7 @@ INFO: [Synth 8-3886] merging instance 'inst_i2c_dri/slave_address_reg_reg[4]' (F
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_i2c_dri/slave_address_reg_reg[5] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_i2c_dri/slave_address_reg_reg[6] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 824.020 ; gain = 503.801
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 824.117 ; gain = 504.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -592,13 +594,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 824.020 ; gain = 503.801
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 824.117 ; gain = 504.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 829.000 ; gain = 508.781
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 831.355 ; gain = 511.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -610,7 +612,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -634,7 +636,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -647,7 +649,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -659,25 +661,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -739,18 +741,18 @@ Report Cell Usage:
 |31    |LUT6          |   276|
 |32    |FDCE          |    44|
 |33    |FDPE          |     4|
-|34    |FDRE          |   427|
+|34    |FDRE          |   428|
 |35    |FDSE          |    12|
 |36    |IBUF          |     2|
 |37    |IOBUF         |     1|
-|38    |OBUF          |    27|
+|38    |OBUF          |    28|
 +------+--------------+------+
 
 Report Instance Areas: 
 +------+---------------+---------------+------+
 |      |Instance       |Module         |Cells |
 +------+---------------+---------------+------+
-|1     |top            |               |  1348|
+|1     |top            |               |  1350|
 |2     |  ct           |calcu_tmp      |    45|
 |3     |  inst_i2c_dri |i2c_dri        |   147|
 |4     |  mod1         |clock_vga      |   192|
@@ -759,17 +761,17 @@ Report Instance Areas:
 |7     |  tc           |tmp_change     |    63|
 +------+---------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 835.207 ; gain = 514.988
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 837.926 ; gain = 517.809
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 835.207 ; gain = 174.375
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 835.207 ; gain = 514.988
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 837.926 ; gain = 176.297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 837.926 ; gain = 517.809
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 102 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.207 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 837.926 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
@@ -777,10 +779,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 194 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 835.207 ; gain = 527.344
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.207 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 837.926 ; gain = 530.750
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 837.926 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'E:/vivado_files/vgatest/vgatest.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu May 26 18:03:29 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri May 27 16:26:42 2022...

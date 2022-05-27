@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu May 26 18:05:24 2022
+| Date         : Fri May 27 16:27:53 2022
 | Host         : LAPTOP-NCO9BMV1 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 507
+             Violations found: 508
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell   | 503        |
-| TIMING-18 | Warning  | Missing input or output delay | 4          |
+| TIMING-18 | Warning  | Missing input or output delay | 5          |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -2564,6 +2564,11 @@ An output delay is missing on Is_warning relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on buzzer relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#5 Warning
 Missing input or output delay  
 An output delay is missing on dri_clk relative to clock(s) sys_clk_pin
 Related violations: <none>

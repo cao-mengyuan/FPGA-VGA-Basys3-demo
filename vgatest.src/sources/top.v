@@ -9,6 +9,7 @@ module top (
 
 	output Is_warning,
 	output Is_fire,
+	output reg buzzer,
 
 	// input   [7:0]   TMP,
 	input			CLK100MHZ,
@@ -21,6 +22,9 @@ module top (
 	// output [9:0] y,
 	// output [16:0] addra
 );
+
+always @(posedge CLK100MHZ)
+	buzzer <= Is_fire;
 
 wire [10:0] x;
 wire [9:0] y;

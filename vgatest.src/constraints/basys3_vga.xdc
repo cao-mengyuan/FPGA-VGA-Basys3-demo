@@ -176,8 +176,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports Vsync]
 #set_property PACKAGE_PIN H2 [get_ports {JA[6]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {JA[6]}]
 ##Sch name = JA10
-#set_property PACKAGE_PIN G3 [get_ports {JA[7]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JA[7]}]
+set_property PACKAGE_PIN G3 [get_ports buzzer]
+set_property IOSTANDARD LVCMOS33 [get_ports buzzer]
 
 ##USB-RS232 Interface
 #set_property PACKAGE_PIN B18 [get_ports RsRx]
