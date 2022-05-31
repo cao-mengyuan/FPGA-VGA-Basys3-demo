@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri May 27 16:27:54 2022
+| Date             : Wed Jun  1 02:17:38 2022
 | Host             : LAPTOP-NCO9BMV1 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.076        |
+| Total On-Chip Power (W)  | 0.078        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.003        |
+| Dynamic (W)              | 0.005        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,17 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1458 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      581 |     20800 |            2.79 |
-|   BUFG         |    <0.001 |        3 |        32 |            9.38 |
-|   Register     |    <0.001 |      528 |     41600 |            1.27 |
-|   CARRY4       |    <0.001 |      101 |      8150 |            1.24 |
-|   Others       |     0.000 |      100 |       --- |             --- |
-| Signals        |    <0.001 |     1345 |       --- |             --- |
-| Block RAM      |    <0.001 |     21.5 |        50 |           43.00 |
-| I/O            |    <0.001 |       31 |       106 |           29.25 |
+| Slice Logic    |     0.001 |     1668 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      714 |     20800 |            3.43 |
+|   BUFG         |    <0.001 |        4 |        32 |           12.50 |
+|   CARRY4       |    <0.001 |      111 |      8150 |            1.36 |
+|   Register     |    <0.001 |      616 |     41600 |            1.48 |
+|   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
+|   Others       |     0.000 |       94 |       --- |             --- |
+| Signals        |     0.001 |     1519 |       --- |             --- |
+| Block RAM      |     0.001 |     21.5 |        50 |           43.00 |
+| I/O            |    <0.001 |       35 |       106 |           33.02 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.076 |          |           |                 |
+| Total          |     0.078 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
+| Vccint    |       1.000 |     0.015 |       0.004 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,10 +140,11 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------+-----------+
-| Name | Power (W) |
-+------+-----------+
-| top  |     0.003 |
-+------+-----------+
++--------+-----------+
+| Name   | Power (W) |
++--------+-----------+
+| top    |     0.005 |
+|   mod2 |     0.001 |
++--------+-----------+
 
 

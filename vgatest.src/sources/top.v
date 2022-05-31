@@ -7,6 +7,9 @@ module top (
     output i2c_done,
     output [7:0] data,
 
+    input remote_in,
+    output [2:0] current_state,
+
 	output Is_warning,
 	output Is_fire,
 	output reg buzzer,
@@ -50,6 +53,8 @@ clock_vga mod1(
 );
 
 imageGenerator mod2(
+	.current_state(current_state),
+
 	.is_fire   (Is_fire),
 	.is_warning(Is_warning),
 	.tens(Tens),
@@ -105,6 +110,28 @@ tmp_change tc(
 	.clk(CLK100MHZ),
 	.tmp(tmp),
 	.data(data)
+);
+
+// wire remote_done;
+wire [7:0] remote_data;
+
+red_receive rr(
+	.sys_clk  (CLK100MHZ),
+	.rst_n    (rst_n),
+	.remote_in(remote_in),
+	.led      (),
+	.data     (remote_data)
+);
+
+
+// wire [2:0] current_state;
+
+process_infrared pi(
+	.clk  (CLK100MHZ),
+	.rst_n(rst_n),
+	.remote_data(remote_data),
+	// .remote_done(remote_done),
+	.state(current_state)
 );
 
 

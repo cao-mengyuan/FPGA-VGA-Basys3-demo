@@ -179,6 +179,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports Vsync]
 set_property PACKAGE_PIN G3 [get_ports buzzer]
 set_property IOSTANDARD LVCMOS33 [get_ports buzzer]
 
+set_property PACKAGE_PIN P18 [get_ports remote_in]
+set_property IOSTANDARD LVCMOS33 [get_ports remote_in]
+
 ##USB-RS232 Interface
 #set_property PACKAGE_PIN B18 [get_ports RsRx]
 #set_property IOSTANDARD LVCMOS33 [get_ports RsRx]
@@ -216,3 +219,10 @@ set_property PACKAGE_PIN E19 [get_ports {data[1]}]
 set_property PACKAGE_PIN U16 [get_ports {data[0]}]
 set_property PACKAGE_PIN P3 [get_ports Is_fire]
 set_property PACKAGE_PIN N3 [get_ports Is_warning]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {current_state[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {current_state[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {current_state[0]}]
+set_property PACKAGE_PIN U3 [get_ports {current_state[2]}]
+set_property PACKAGE_PIN W3 [get_ports {current_state[1]}]
+set_property PACKAGE_PIN V3 [get_ports {current_state[0]}]

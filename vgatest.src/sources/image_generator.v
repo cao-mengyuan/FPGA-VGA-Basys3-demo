@@ -4,6 +4,8 @@ module imageGenerator (
 	input [3:0] tens,
 	input [3:0] ones,
 
+	input [2:0] current_state,
+
 	input			i_clk,
 	input	[10:0]	i_x,
 	input	[9:0]	i_y,
@@ -300,7 +302,11 @@ parameter tmp_color_blue = 4'hf;
 parameter tmp_color_red = 4'hf;
 parameter tmp_color_green = 4'hf;
 //------------------------------------------------------------------//
-
+localparam [2:0] //state
+    shutdown = 3'b100,
+    menu     = 3'b001,
+    working  = 3'b010;
+//------------------------------------------------------------------//
 always @(posedge pixel_clk) begin
 	// if (i_x < display_x/4) begin
 		// blue  	<= 4'hf;
@@ -319,326 +325,338 @@ always @(posedge pixel_clk) begin
 	// red <= rgb[11:8];
 	// green <= rgb[7:4];
 	// blue <= rgb[3:0];
-	if( is_fire == 0) addra_f = 0;
-	if( is_warning == 0) addra_w = 0;
-	
-	if(i_x >= 521 && i_x <= 640  && i_y >= 1 && i_y <= 120  & is_fire == 1 ) begin //fire region
-		red <= douta_f[11:8];
-		green <= douta_f[7:4];
-		blue <= douta_f[3:0];
-		addra_f = addra_f + 1;
-		// addra_w = 0;
+	case(current_state)
+		shutdown: begin
+			red <= 4'h0;
+			green <= 4'h0;
+			blue <= 4'h0;
 		end
-	else if(i_x >= 401 && i_x <= 520  && i_y >= 1 && i_y <= 120  & is_warning == 1 ) begin //warning region
-			red <= douta_w[11:8];
-			green <= douta_w[7:4];
-			blue <= douta_w[3:0];
-			addra_w = addra_w + 1;
-			// addra_f = 0;
+
+		menu: begin
+			red <= 4'hf;
+			green <= 4'hf;
+			blue <= 4'hf;
+		end
+
+		working:begin
+		if( is_fire == 0) addra_f = 0;
+		if( is_warning == 0) addra_w = 0;
+		
+		if(i_x >= 521 && i_x <= 640  && i_y >= 1 && i_y <= 120  & is_fire == 1 ) begin //fire region
+			red <= douta_f[11:8];
+			green <= douta_f[7:4];
+			blue <= douta_f[3:0];
+			addra_f = addra_f + 1;
+			// addra_w = 0;
 			end
+		else if(i_x >= 401 && i_x <= 520  && i_y >= 1 && i_y <= 120  & is_warning == 1 ) begin //warning region
+				red <= douta_w[11:8];
+				green <= douta_w[7:4];
+				blue <= douta_w[3:0];
+				addra_w = addra_w + 1;
+				// addra_f = 0;
+				end
+
+		else if(i_x >= 321 && i_x <= 400  && i_y >= 151 && i_y <= 270)
+				case(tens)
+					4'd0: begin 
+						if(douta_0_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_0_1 <= addra_0_1 + 1;
+						addra_1_1 <= 0;   addra_2_1 <= 0;    addra_3_1 <= 0;
+						addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
+						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd1: begin
+						if(douta_1_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_1_1 <= addra_1_1 + 1;
+						addra_0_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
+						addra_4_1 <= 0;    addra_5_1 <= 0;    addra_6_1 <= 0;
+						addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd2: begin 
+						if(douta_2_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_2_1 <= addra_2_1 + 1;
+						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_3_1 <= 0;
+						addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
+						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd3: begin 
+						if(douta_3_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_3_1 <= addra_3_1 + 1;
+						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
+						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd4: begin 
+						if(douta_4_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_4_1 <= addra_4_1 + 1;
+						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_3_1 <= 0;   addra_5_1 <= 0;   addra_6_1 <= 0;
+						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd5: begin 
+						if(douta_5_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_5_1 <= addra_5_1 + 1;
+						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_3_1 <= 0;   addra_4_1 <= 0;   addra_6_1 <= 0;
+						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd6: begin 
+						if(douta_6_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_6_1 <= addra_6_1 + 1;
+						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd7: begin 
+						if(douta_7_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_7_1 <= addra_7_1 + 1;
+						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						addra_6_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd8: begin 
+						if(douta_8_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_8_1 <= addra_8_1 + 1;
+						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						addra_6_1 <= 0;    addra_7_1 <= 0;    addra_9_1 <= 0;
+					end
+
+					4'd9: begin 
+						if(douta_9_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_9_1 <= addra_9_1 + 1;
+						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						addra_6_1 <= 0;    addra_7_1 <= 0;    addra_8_1 <= 0;
+					end
+
+					default: begin 
+						red <= 4'hf; green <= 4'hf; blue <= 4'hf;
+						addra_0_1 <= 0;    
+						addra_1_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
+						addra_4_1 <= 0;    addra_6_1 <= 0;    addra_5_1 <= 0;
+						addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+					end
+				endcase
+
+		else if(i_x >= 401 && i_x <= 480  && i_y >= 151 && i_y <= 270)
+			case(ones)
+					4'd0: begin
+						if(douta_0_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_0_2 <= addra_0_2 + 1;
+						addra_1_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
+						addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
+
+					4'd1: begin
+						if(douta_1_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin 
+							red <= tmp_color_red;  
+							green <= tmp_color_green;  
+							blue <= tmp_color_blue;  
+						end
+						addra_1_2 <= addra_1_2 + 1;
+						addra_0_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
+						addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
+					
+					4'd2: begin
+						if(douta_2_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_2_2 <= addra_2_2 + 1;
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_3_2 <= 0;
+						addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
+
+					4'd3: begin
+						if(douta_3_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_3_2 <= addra_3_2 + 1;
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
+						addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
+
+					4'd4: begin
+						if(douta_4_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_4_2 <= addra_4_2 + 1;
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
+						addra_5_2 <= 0;    addra_6_2 <= 0;    addra_3_2 <= 0;
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
+
+					4'd5: begin
+						if(douta_5_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_5_2 <= addra_5_2 + 1;
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
+						addra_3_2 <= 0;    addra_4_2 <= 0;    addra_6_2 <= 0;    
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
+
+					4'd6: begin 
+						if(douta_6_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_6_2 <= addra_6_2 + 1;
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
+						addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
 
 
+					4'd7: begin 
+						if(douta_7_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_7_2 <= addra_7_2 + 1;
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
+						addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
+						addra_6_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+					end
 
-	else if(i_x >= 321 && i_x <= 400  && i_y >= 151 && i_y <= 270)
-			case(tens)
-				4'd0: begin 
-					if(douta_0_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+					4'd8: begin 
+						if(douta_8_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_8_2 <= addra_8_2 + 1; 
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
+						addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
+						addra_6_2 <= 0;    addra_7_2 <= 0;    addra_9_2 <= 0;
+					end
+
+					4'd9: begin 
+						if(douta_9_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						else begin
+							red <= tmp_color_red;
+							green <= tmp_color_green;
+							blue <= tmp_color_blue;
+						end
+						addra_9_2 <= addra_9_2 + 1;
+						addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
+						addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
+						addra_6_2 <= 0;    addra_7_2 <= 0;    addra_8_2 <= 0;
+					end
+
+					default: begin 
+						red <= 4'hf; green <= 4'hf; blue <= 4'hf;
+						addra_0_2 <= 0;
+						addra_1_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
+						addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;    
+						addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
+						end
+				endcase
+
+		else if( i_x >= 501 && i_x <= 620 && i_y >= 151 && i_y <= 270 ) begin
+					if(douta_c == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
 					else begin
 						red <= tmp_color_red;
 						green <= tmp_color_green;
 						blue <= tmp_color_blue;
 					end
-					addra_0_1 <= addra_0_1 + 1;
-					addra_1_1 <= 0;   addra_2_1 <= 0;    addra_3_1 <= 0;
-					addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
-					addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+					addra_c <= addra_c + 1;
 				end
 
-				4'd1: begin
-					if(douta_1_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_1_1 <= addra_1_1 + 1;
-					addra_0_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
-					addra_4_1 <= 0;    addra_5_1 <= 0;    addra_6_1 <= 0;
-					addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
+		else begin
+			red <= 4'h0;
+			green <= 4'h0;
+			blue <= 4'h0;
+		end
 
-				4'd2: begin 
-					if(douta_2_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_2_1 <= addra_2_1 + 1;
-					addra_0_1 <= 0;   addra_1_1 <= 0;    addra_3_1 <= 0;
-					addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
-					addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
-
-				4'd3: begin 
-					if(douta_3_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_3_1 <= addra_3_1 + 1;
-					addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
-					addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
-					addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
-
-				4'd4: begin 
-					if(douta_4_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_4_1 <= addra_4_1 + 1;
-					addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
-					addra_3_1 <= 0;   addra_5_1 <= 0;   addra_6_1 <= 0;
-					addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
-
-				4'd5: begin 
-					if(douta_5_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_5_1 <= addra_5_1 + 1;
-					addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
-					addra_3_1 <= 0;   addra_4_1 <= 0;   addra_6_1 <= 0;
-					addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
-
-				4'd6: begin 
-					if(douta_6_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_6_1 <= addra_6_1 + 1;
-					addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-					addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-					addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
-
-				4'd7: begin 
-					if(douta_7_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_7_1 <= addra_7_1 + 1;
-					addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-					addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-					addra_6_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
-
-				4'd8: begin 
-					if(douta_8_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_8_1 <= addra_8_1 + 1;
-					addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-					addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-					addra_6_1 <= 0;    addra_7_1 <= 0;    addra_9_1 <= 0;
-				end
-
-				4'd9: begin 
-					if(douta_9_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_9_1 <= addra_9_1 + 1;
-					addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-					addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-					addra_6_1 <= 0;    addra_7_1 <= 0;    addra_8_1 <= 0;
-				end
-
-				default: begin 
-					red <= 4'hf; green <= 4'hf; blue <= 4'hf;
-					addra_0_1 <= 0;    
-					addra_1_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
-					addra_4_1 <= 0;    addra_6_1 <= 0;    addra_5_1 <= 0;
-					addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
-				end
-			endcase
-
-	else if(i_x >= 401 && i_x <= 480  && i_y >= 151 && i_y <= 270)
-		case(ones)
-				4'd0: begin
-					if(douta_0_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_0_2 <= addra_0_2 + 1;
-					addra_1_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
-					addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-
-				4'd1: begin
-					if(douta_1_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin 
-						red <= tmp_color_red;  
-						green <= tmp_color_green;  
-						blue <= tmp_color_blue;  
-					end
-					addra_1_2 <= addra_1_2 + 1;
-					addra_0_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
-					addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-				
-				4'd2: begin
-					if(douta_2_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_2_2 <= addra_2_2 + 1;
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_3_2 <= 0;
-					addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-
-				4'd3: begin
-					if(douta_3_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_3_2 <= addra_3_2 + 1;
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
-					addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-
-				4'd4: begin
-					if(douta_4_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_4_2 <= addra_4_2 + 1;
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
-					addra_5_2 <= 0;    addra_6_2 <= 0;    addra_3_2 <= 0;
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-
-				4'd5: begin
-					if(douta_5_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_5_2 <= addra_5_2 + 1;
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
-					addra_3_2 <= 0;    addra_4_2 <= 0;    addra_6_2 <= 0;    
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-
-				4'd6: begin 
-					if(douta_6_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_6_2 <= addra_6_2 + 1;
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
-					addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-
-
-				4'd7: begin 
-					if(douta_7_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_7_2 <= addra_7_2 + 1;
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
-					addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
-					addra_6_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-				end
-
-				4'd8: begin 
-					if(douta_8_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_8_2 <= addra_8_2 + 1; 
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
-					addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
-					addra_6_2 <= 0;    addra_7_2 <= 0;    addra_9_2 <= 0;
-				end
-
-				4'd9: begin 
-					if(douta_9_2 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-					else begin
-						red <= tmp_color_red;
-						green <= tmp_color_green;
-						blue <= tmp_color_blue;
-					end
-					addra_9_2 <= addra_9_2 + 1;
-					addra_0_2 <= 0;    addra_1_2 <= 0;    addra_2_2 <= 0;
-					addra_3_2 <= 0;    addra_4_2 <= 0;    addra_5_2 <= 0;
-					addra_6_2 <= 0;    addra_7_2 <= 0;    addra_8_2 <= 0;
-				end
-
-				default: begin 
-					red <= 4'hf; green <= 4'hf; blue <= 4'hf;
-					addra_0_2 <= 0;
-					addra_1_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
-					addra_4_2 <= 0;    addra_5_2 <= 0;    addra_6_2 <= 0;    
-					addra_7_2 <= 0;    addra_8_2 <= 0;    addra_9_2 <= 0;
-					end
-			endcase
-
-	else if( i_x >= 501 && i_x <= 620 && i_y >= 151 && i_y <= 270 ) begin
-				if(douta_c == 1) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-				else begin
-					red <= tmp_color_red;
-					green <= tmp_color_green;
-					blue <= tmp_color_blue;
-				end
-				addra_c <= addra_c + 1;
-			end
-
-	else begin
-		red <= 4'h0;
-		green <= 4'h0;
-		blue <= 4'h0;
-	end
-
-	if( i_x == 1 && i_y == 1 )begin
+		if( i_x == 1 && i_y == 1 )begin
 
 			addra_0_1 <= 0;    
 			addra_1_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
@@ -654,6 +672,8 @@ always @(posedge pixel_clk) begin
 			addra_w <= 0;
 			addra_f <= 0;
 		end
+	end
+endcase
 
 	if(addra_c == 14400) addra_c = 0;
 	if(addra_f == 14400) addra_f = 0;
