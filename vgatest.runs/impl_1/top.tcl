@@ -88,6 +88,9 @@ set rc [catch {
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8.xci
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0.xci
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1.xci
+  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/menu/menu.xci
+  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Temperature/Temperature.xci
+  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Camera/Camera.xci
   read_xdc E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

@@ -279,7 +279,35 @@ number9 num9_2 (
   .douta(douta_9_2)  // output wire [0 : 0] douta
 );
 //-----------------------------------------------------------------------------//
-
+wire douta_menu;
+reg [13:0] addra_menu = 14'b0;
+menu menu_1 (  //160*80
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_menu),  // input wire [13 : 0] addra
+  .douta(douta_menu)  // output wire [0 : 0] douta
+);
+//-----------------------------------------------------------------------------//
+// 260*70
+wire douta_camera;
+reg [14:0] addra_camera = 15'b0;
+Camera camera_1 (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_camera),  // input wire [14 : 0] addra
+  .douta(douta_camera)  // output wire [0 : 0] douta
+);
+//-----------------------------------------------------------------------------//
+wire douta_tmp;
+reg [14:0] addra_tmp = 15'b0;
+//260*70
+Temperature temperature_1 (
+  .clka(pixel_clk),    // input wire clka
+  .ena(1'b1),      // input wire ena
+  .addra(addra_tmp),  // input wire [14 : 0] addra
+  .douta(douta_tmp)  // output wire [0 : 0] douta
+);
+//-----------------------------------------------------------------------------//
 
 reg [3:0] blue	= 4'h0;
 reg [3:0] red	= 4'h0;
@@ -333,9 +361,59 @@ always @(posedge pixel_clk) begin
 		end
 
 		menu: begin
-			red <= 4'hf;
-			green <= 4'hf;
-			blue <= 4'hf;
+			// red <= 4'hf;
+			// green <= 4'hf;
+			// blue <= 4'hf;
+			if( i_x == 1 && i_y == 1) begin
+				addra_menu = 0;
+				addra_camera = 0;
+				addra_tmp = 0;
+			end
+
+			if( i_x >= 241 && i_x <= 400 && i_y >= 31 && i_y <= 110) begin
+				if(douta_menu == 1) begin 
+					red <= 4'h0;
+					green <= 4'h0;
+					blue <= 4'h0;
+				end
+				else begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				addra_menu <= addra_menu + 1;
+			end
+			else if( i_x >= 191 && i_x <= 450 && i_y >= 141 && i_y <= 210) begin
+				if(douta_tmp == 1) begin 
+					red <= 4'h0;
+					green <= 4'h0;
+					blue <= 4'h0;
+				end
+				else begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				addra_tmp <= addra_tmp + 1;
+			end
+			else if( i_x >= 191 && i_x <= 450 && i_y >= 241 && i_y <= 310)begin
+				if(douta_camera == 1) begin 
+					red <= 4'h0;
+					green <= 4'h0;
+					blue <= 4'h0;
+				end
+				else begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				addra_camera <= addra_camera + 1;
+			end
+			else begin
+				red <= 4'h0;
+				green <= 4'h0;
+				blue <= 4'h0;
+			end
 		end
 
 		working:begin
@@ -674,6 +752,10 @@ always @(posedge pixel_clk) begin
 		end
 	end
 endcase
+	
+	if(addra_menu == 12800) addra_menu = 0;
+	if(addra_tmp == 18200) addra_tmp = 0;
+	if(addra_camera == 18200) addra_camera = 0;
 
 	if(addra_c == 14400) addra_c = 0;
 	if(addra_f == 14400) addra_f = 0;

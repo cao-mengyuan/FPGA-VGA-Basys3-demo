@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1654020945">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1654058433">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -159,6 +159,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../二下/数电/数电大作业/VGA图片/menu.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../二下/数电/数电大作业/VGA图片/temperature.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../二下/数电/数电大作业/VGA图片/camera.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -200,4 +218,7 @@
   <BlockFileSet Type="BlockSrcs" Name="number8"/>
   <BlockFileSet Type="BlockSrcs" Name="number0"/>
   <BlockFileSet Type="BlockSrcs" Name="number1"/>
+  <BlockFileSet Type="BlockSrcs" Name="menu"/>
+  <BlockFileSet Type="BlockSrcs" Name="Temperature"/>
+  <BlockFileSet Type="BlockSrcs" Name="Camera"/>
 </GenRun>

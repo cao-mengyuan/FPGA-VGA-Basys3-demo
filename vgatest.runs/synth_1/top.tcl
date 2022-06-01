@@ -44,6 +44,9 @@ add_files E:/二下/数电/数电大作业/VGA图片/7.coe
 add_files E:/二下/数电/数电大作业/VGA图片/8.coe
 add_files E:/二下/数电/数电大作业/VGA图片/0.coe
 add_files E:/二下/数电/数电大作业/VGA图片/centigrade.coe
+add_files e:/二下/数电/数电大作业/VGA图片/menu.coe
+add_files e:/二下/数电/数电大作业/VGA图片/temperature.coe
+add_files e:/二下/数电/数电大作业/VGA图片/camera.coe
 read_verilog -library xil_defaultlib {
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v
   E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v
@@ -93,6 +96,15 @@ set_property used_in_implementation false [get_files -all e:/vivado_files/vgates
 
 read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/menu/menu.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/menu/menu_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Temperature/Temperature.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Temperature/Temperature_ooc.xdc]
+
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Camera/Camera.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Camera/Camera_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
