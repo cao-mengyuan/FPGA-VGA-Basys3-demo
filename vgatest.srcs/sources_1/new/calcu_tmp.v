@@ -27,8 +27,8 @@ module calcu_tmp(
     output   reg  is_warning = 0
     );
 
-localparam Warning_threshold = 8'b0001_0000;
-localparam Fire_threshold    = 8'b0010_0000;
+localparam Warning_threshold = 8'b0001_1110;//30度警告
+localparam Fire_threshold    = 8'b0010_0000;//32度起火
 
 always @(posedge clk)
     if ( TMP >=  Fire_threshold ) begin

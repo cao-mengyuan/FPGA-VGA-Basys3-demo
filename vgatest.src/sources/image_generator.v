@@ -383,11 +383,17 @@ reg [3:0] green	= 4'h0;
 parameter tmp_color_blue = 4'hf;
 parameter tmp_color_red = 4'hf;
 parameter tmp_color_green = 4'hf;
+
+parameter chosen_color_red = 4'h0;
+parameter chosen_color_green = 4'h0;
+parameter chosen_color_blue = 4'hc;
 //------------------------------------------------------------------//
-localparam [2:0] //state
-    shutdown = 3'b100,
-    menu     = 3'b001,
-    working  = 3'b010;
+localparam [2:0]
+    shutdown = 3'b000,
+    menu_tmp = 3'b001,
+    working  = 3'b010,
+    menu_cam = 3'b011,
+    show_pic = 3'b111;
 //------------------------------------------------------------------//
 always @(posedge pixel_clk) begin
 	// if (i_x < display_x/4) begin
@@ -414,7 +420,66 @@ always @(posedge pixel_clk) begin
 			blue <= 4'h0;
 		end
 
-		menu: begin
+		menu_tmp: begin
+			// red <= 4'hf;
+			// green <= 4'hf;
+			// blue <= 4'hf;
+			if( i_x == 1 && i_y == 1) begin
+				addra_menu = 0;
+				addra_camera = 0;
+				addra_tmp = 0;
+			end
+
+			if( i_x >= 241 && i_x <= 400 && i_y >= 31 && i_y <= 110) begin
+				if(douta_menu == 1) begin 
+					red <= 4'h0;
+					green <= 4'h0;
+					blue <= 4'h0;
+				end
+				else begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				addra_menu <= addra_menu + 1;
+			end
+			else if( i_x >= 191 && i_x <= 450 && i_y >= 141 && i_y <= 210) begin
+				if(douta_tmp == 1) begin 
+					// red <= 4'h0;
+					// green <= 4'h0;
+					// blue <= 4'h0;
+					red <= chosen_color_red;
+					green <= chosen_color_green;
+					blue <= chosen_color_blue;
+				end
+				else begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				addra_tmp <= addra_tmp + 1;
+			end
+			else if( i_x >= 191 && i_x <= 450 && i_y >= 241 && i_y <= 310)begin
+				if(douta_camera == 1) begin 
+					red <= 4'h0;
+					green <= 4'h0;
+					blue <= 4'h0;
+				end
+				else begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				addra_camera <= addra_camera + 1;
+			end
+			else begin
+				red <= 4'h0;
+				green <= 4'h0;
+				blue <= 4'h0;
+			end
+		end
+
+		menu_cam: begin
 			// red <= 4'hf;
 			// green <= 4'hf;
 			// blue <= 4'hf;
@@ -442,6 +507,9 @@ always @(posedge pixel_clk) begin
 					red <= 4'h0;
 					green <= 4'h0;
 					blue <= 4'h0;
+					// red <= chosen_color_red;
+					// green <= chosen_color_green;
+					// blue <= chosen_color_blue;
 				end
 				else begin
 					red <= 4'hf;
@@ -452,9 +520,9 @@ always @(posedge pixel_clk) begin
 			end
 			else if( i_x >= 191 && i_x <= 450 && i_y >= 241 && i_y <= 310)begin
 				if(douta_camera == 1) begin 
-					red <= 4'h0;
-					green <= 4'h0;
-					blue <= 4'h0;
+					red <= chosen_color_red;
+					green <= chosen_color_green;
+					blue <= chosen_color_blue;
 				end
 				else begin
 					red <= 4'hf;
@@ -468,6 +536,12 @@ always @(posedge pixel_clk) begin
 				green <= 4'h0;
 				blue <= 4'h0;
 			end
+		end
+
+		show_pic: begin
+			red <= chosen_color_red;
+			green <= chosen_color_green;
+			blue <= chosen_color_blue;
 		end
 
 		working:begin
