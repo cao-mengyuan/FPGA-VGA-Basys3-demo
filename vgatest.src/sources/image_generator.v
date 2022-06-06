@@ -4,6 +4,8 @@ module imageGenerator (
 	input [3:0] tens,
 	input [3:0] ones,
 
+	input [2:0] gif_num,
+
 	input [2:0] current_state,
 
 	input			i_clk,
@@ -55,17 +57,69 @@ blk_mem_gen_3 centigrade (
 );
 
 //---------------------------------------------------------------------------//
+//gif generator
+// reg [15:0] addra_g1 = 16'b0;
+// wire [12:0] douta_g1;
+
+// Gif1 g1 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_g1),  // input wire [15 : 0] addra
+//   .douta(douta_g1)  // output wire [11 : 0] douta
+// );
+
+// reg [15:0] addra_g2 = 16'b0;
+// wire [12:0] douta_g2;
+
+// Gif2 g2 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_g2),  // input wire [15 : 0] addra
+//   .douta(douta_g2)  // output wire [11 : 0] douta
+// );
+
+// reg [15:0] addra_g3 = 16'b0;
+// wire [12:0] douta_g3;
+
+// Gif3 g3 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_g3),  // input wire [15 : 0] addra
+//   .douta(douta_g3)  // output wire [11 : 0] douta
+// );
+
+// reg [15:0] addra_g4 = 16'b0;
+// wire [12:0] douta_g4;
+
+// Gif4 g4 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_g4),  // input wire [15 : 0] addra
+//   .douta(douta_g4)  // output wire [11 : 0] douta
+// );
+
+// reg [15:0] addra_g5 = 16'b0;
+// wire [12:0] douta_g5;
+
+// Gif5 g5 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_g5),  // input wire [15 : 0] addra
+//   .douta(douta_g5)  // output wire [11 : 0] douta
+// );
+
+//---------------------------------------------------------------------------//
 
 //数字0显示
-wire douta_0_1;
-reg [13:0] addra_0_1 = 14'b0;
+// wire douta_0_1;
+// reg [13:0] addra_0_1 = 14'b0;
 
-number0 num0_1 (
-  .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
-  .addra(addra_0_1),  // input wire [13 : 0] addra
-  .douta(douta_0_1)  // output wire [0 : 0] douta
-);
+// number0 num0_1 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_0_1),  // input wire [13 : 0] addra
+//   .douta(douta_0_1)  // output wire [0 : 0] douta
+// );
 
 wire douta_0_2;
 reg [13:0] addra_0_2 = 14'b0;
@@ -171,15 +225,15 @@ number4 num4_2 (
 
 //-----------------------------------------------------------------------------//
 //数字5显示
-wire douta_5_1;
-reg [13:0] addra_5_1 = 14'b0;
+// wire douta_5_1;
+// reg [13:0] addra_5_1 = 14'b0;
 
-number5 num5_1 (
-  .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
-  .addra(addra_5_1),  // input wire [13 : 0] addra
-  .douta(douta_5_1)  // output wire [0 : 0] douta
-);
+// number5 num5_1 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_5_1),  // input wire [13 : 0] addra
+//   .douta(douta_5_1)  // output wire [0 : 0] douta
+// );
 
 wire douta_5_2;
 reg [13:0] addra_5_2 = 14'b0;
@@ -193,15 +247,15 @@ number5 num5_2 (
 
 //-----------------------------------------------------------------------------//
 //数字6
-wire douta_6_1;
-reg [13:0] addra_6_1 = 14'b0;
+// wire douta_6_1;
+// reg [13:0] addra_6_1 = 14'b0;
 
-number6 num6_1 (
-  .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
-  .addra(addra_6_1),  // input wire [13 : 0] addra
-  .douta(douta_6_1)  // output wire [0 : 0] douta
-);
+// number6 num6_1 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_6_1),  // input wire [13 : 0] addra
+//   .douta(douta_6_1)  // output wire [0 : 0] douta
+// );
 
 wire douta_6_2;
 reg [13:0] addra_6_2 = 14'b0;
@@ -215,15 +269,15 @@ number6 num6_2 (
 
 //-----------------------------------------------------------------------------//
 //数字7
-wire douta_7_1;
-reg [13:0] addra_7_1 = 14'b0;
+// wire douta_7_1;
+// reg [13:0] addra_7_1 = 14'b0;
 
-number7 num7_1 (
-  .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
-  .addra(addra_7_1),  // input wire [13 : 0] addra
-  .douta(douta_7_1)  // output wire [0 : 0] douta
-);
+// number7 num7_1 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_7_1),  // input wire [13 : 0] addra
+//   .douta(douta_7_1)  // output wire [0 : 0] douta
+// );
 
 wire douta_7_2;
 reg [13:0] addra_7_2 = 14'b0;
@@ -236,15 +290,15 @@ number7 num7_2 (
 );
 //-----------------------------------------------------------------------------//
 //数字8
-wire douta_8_1;
-reg [13:0] addra_8_1 = 14'b0;
+// wire douta_8_1;
+// reg [13:0] addra_8_1 = 14'b0;
 
-number8 num8_1 (
-  .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
-  .addra(addra_8_1),  // input wire [13 : 0] addra
-  .douta(douta_8_1)  // output wire [0 : 0] douta
-);
+// number8 num8_1 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_8_1),  // input wire [13 : 0] addra
+//   .douta(douta_8_1)  // output wire [0 : 0] douta
+// );
 
 wire douta_8_2;
 reg [13:0] addra_8_2 = 14'b0;
@@ -259,15 +313,15 @@ number8 num8_2 (
 //-----------------------------------------------------------------------------//
 
 //数字9显示
-wire douta_9_1;
-reg [13:0] addra_9_1 = 14'b0;
+// wire douta_9_1;
+// reg [13:0] addra_9_1 = 14'b0;
 
-number9 num9_1 (
-  .clka(pixel_clk),    // input wire clka
-  .ena(1'b1),      // input wire ena
-  .addra(addra_9_1),  // input wire [13 : 0] addra
-  .douta(douta_9_1)  // output wire [0 : 0] douta
-);
+// number9 num9_1 (
+//   .clka(pixel_clk),    // input wire clka
+//   .ena(1'b1),      // input wire ena
+//   .addra(addra_9_1),  // input wire [13 : 0] addra
+//   .douta(douta_9_1)  // output wire [0 : 0] douta
+// );
 
 wire douta_9_2;
 reg [13:0] addra_9_2 = 14'b0;
@@ -435,19 +489,72 @@ always @(posedge pixel_clk) begin
 				// addra_f = 0;
 				end
 
+		// else if(i_x >= 1 && i_x <= 160 && i_y >= 321 && i_y <= 480)begin
+		// 	case(gif_num)
+		// 		3'd1: begin
+		// 				red <= douta_g1[11:8];
+		// 				green <= douta_g1[7:4];
+		// 				blue <= douta_g1[3:0];
+		// 				addra_g1 = addra_g1 + 1;
+		// 			end
+		// 		3'd2: begin
+		// 				red <= douta_g2[11:8];
+		// 				green <= douta_g2[7:4];
+		// 				blue <= douta_g2[3:0];
+		// 				addra_g2 = addra_g2 + 1;
+		// 			end
+		// 		3'd3: begin
+		// 				red <= douta_g3[11:8];
+		// 				green <= douta_g3[7:4];
+		// 				blue <= douta_g3[3:0];
+		// 				addra_g3 = addra_g3 + 1;
+		// 			end
+		// 		3'd4: begin
+		// 				// red <= douta_g4[11:8];
+		// 				// green <= douta_g4[7:4];
+		// 				// blue <= douta_g4[3:0];
+		// 				// addra_g4 = addra_g4 + 1;
+		// 				red <= tmp_color_red;
+		// 				green <= tmp_color_green;
+		// 				blue <= tmp_color_blue;
+		// 			end
+		// 		3'd5: begin
+		// 				// red <= douta_g5[11:8];
+		// 				// green <= douta_g5[7:4];
+		// 				// blue <= douta_g5[3:0];
+		// 				// addra_g5 = addra_g5 + 1;
+		// 				red <= tmp_color_red;
+		// 				green <= tmp_color_green;
+		// 				blue <= tmp_color_blue;
+		// 			end
+		// 		default: begin
+		// 				// red <= douta_g1[11:8];
+		// 				// green <= douta_g1[7:4];
+		// 				// blue <= douta_g1[3:0];
+		// 				// addra_g1 = addra_g1 + 1;
+		// 				red <= tmp_color_red;
+		// 				green <= tmp_color_green;
+		// 				blue <= tmp_color_blue;
+		// 			end
+		// 	endcase
+		// end
+
 		else if(i_x >= 321 && i_x <= 400  && i_y >= 151 && i_y <= 270)
 				case(tens)
 					4'd0: begin 
-						if(douta_0_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-						else begin
-							red <= tmp_color_red;
-							green <= tmp_color_green;
-							blue <= tmp_color_blue;
-						end
-						addra_0_1 <= addra_0_1 + 1;
-						addra_1_1 <= 0;   addra_2_1 <= 0;    addra_3_1 <= 0;
-						addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
-						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+						// if(douta_0_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						// else begin
+						// 	red <= tmp_color_red;
+						// 	green <= tmp_color_green;
+						// 	blue <= tmp_color_blue;
+						// end
+						// addra_0_1 <= addra_0_1 + 1;
+						// addra_1_1 <= 0;   addra_2_1 <= 0;    addra_3_1 <= 0;
+						// addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
+						// addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+						red <= 4'h0;
+						green <= 4'h0;
+						blue <= 4'h0;
 					end
 
 					4'd1: begin
@@ -458,9 +565,11 @@ always @(posedge pixel_clk) begin
 							blue <= tmp_color_blue;
 						end
 						addra_1_1 <= addra_1_1 + 1;
-						addra_0_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
-						addra_4_1 <= 0;    addra_5_1 <= 0;    addra_6_1 <= 0;
-						addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+						//addra_0_1 <= 0;    
+						addra_2_1 <= 0;    addra_3_1 <= 0;
+						addra_4_1 <= 0;    
+						//addra_5_1 <= 0;    addra_6_1 <= 0;
+						//addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
 					end
 
 					4'd2: begin 
@@ -471,9 +580,11 @@ always @(posedge pixel_clk) begin
 							blue <= tmp_color_blue;
 						end
 						addra_2_1 <= addra_2_1 + 1;
-						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_3_1 <= 0;
-						addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
-						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+						//addra_0_1 <= 0;   
+						addra_1_1 <= 0;    addra_3_1 <= 0;
+						addra_4_1 <= 0;   
+						//addra_5_1 <= 0;    addra_6_1 <= 0;
+						//addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
 					end
 
 					4'd3: begin 
@@ -484,9 +595,11 @@ always @(posedge pixel_clk) begin
 							blue <= tmp_color_blue;
 						end
 						addra_3_1 <= addra_3_1 + 1;
-						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
-						addra_4_1 <= 0;   addra_5_1 <= 0;    addra_6_1 <= 0;
-						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+						//addra_0_1 <= 0;   
+						addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_4_1 <= 0;   
+						//addra_5_1 <= 0;    addra_6_1 <= 0;
+						//addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
 					end
 
 					4'd4: begin 
@@ -497,82 +610,100 @@ always @(posedge pixel_clk) begin
 							blue <= tmp_color_blue;
 						end
 						addra_4_1 <= addra_4_1 + 1;
-						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
-						addra_3_1 <= 0;   addra_5_1 <= 0;   addra_6_1 <= 0;
-						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+						//addra_0_1 <= 0;   
+						addra_1_1 <= 0;    addra_2_1 <= 0;
+						addra_3_1 <= 0;   
+						//addra_5_1 <= 0;   addra_6_1 <= 0;
+						//addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
 					end
 
 					4'd5: begin 
-						if(douta_5_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-						else begin
-							red <= tmp_color_red;
-							green <= tmp_color_green;
-							blue <= tmp_color_blue;
-						end
-						addra_5_1 <= addra_5_1 + 1;
-						addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
-						addra_3_1 <= 0;   addra_4_1 <= 0;   addra_6_1 <= 0;
-						addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+						// if(douta_5_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						// else begin
+						// 	red <= tmp_color_red;
+						// 	green <= tmp_color_green;
+						// 	blue <= tmp_color_blue;
+						// end
+						// addra_5_1 <= addra_5_1 + 1;
+						// addra_0_1 <= 0;   addra_1_1 <= 0;    addra_2_1 <= 0;
+						// addra_3_1 <= 0;   addra_4_1 <= 0;   addra_6_1 <= 0;
+						// addra_7_1 <= 0;   addra_8_1 <= 0;    addra_9_1 <= 0;
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
 					end
 
 					4'd6: begin 
-						if(douta_6_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-						else begin
-							red <= tmp_color_red;
-							green <= tmp_color_green;
-							blue <= tmp_color_blue;
-						end
-						addra_6_1 <= addra_6_1 + 1;
-						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-						addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+						// if(douta_6_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						// else begin
+						// 	red <= tmp_color_red;
+						// 	green <= tmp_color_green;
+						// 	blue <= tmp_color_blue;
+						// end
+						// addra_6_1 <= addra_6_1 + 1;
+						// addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						// addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						// addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
 					end
 
 					4'd7: begin 
-						if(douta_7_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-						else begin
-							red <= tmp_color_red;
-							green <= tmp_color_green;
-							blue <= tmp_color_blue;
-						end
-						addra_7_1 <= addra_7_1 + 1;
-						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-						addra_6_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+						// if(douta_7_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						// else begin
+						// 	red <= tmp_color_red;
+						// 	green <= tmp_color_green;
+						// 	blue <= tmp_color_blue;
+						// end
+						// addra_7_1 <= addra_7_1 + 1;
+						// addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						// addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						// addra_6_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
 					end
 
 					4'd8: begin 
-						if(douta_8_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-						else begin
-							red <= tmp_color_red;
-							green <= tmp_color_green;
-							blue <= tmp_color_blue;
-						end
-						addra_8_1 <= addra_8_1 + 1;
-						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-						addra_6_1 <= 0;    addra_7_1 <= 0;    addra_9_1 <= 0;
+						// if(douta_8_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						// else begin
+						// 	red <= tmp_color_red;
+						// 	green <= tmp_color_green;
+						// 	blue <= tmp_color_blue;
+						// end
+						// addra_8_1 <= addra_8_1 + 1;
+						// addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						// addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						// addra_6_1 <= 0;    addra_7_1 <= 0;    addra_9_1 <= 0;
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
 					end
 
 					4'd9: begin 
-						if(douta_9_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
-						else begin
-							red <= tmp_color_red;
-							green <= tmp_color_green;
-							blue <= tmp_color_blue;
-						end
-						addra_9_1 <= addra_9_1 + 1;
-						addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
-						addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
-						addra_6_1 <= 0;    addra_7_1 <= 0;    addra_8_1 <= 0;
+						// if(douta_9_1 == 0) begin  red <= 4'h0;  green <= 4'h0;  blue <= 4'h0;  end
+						// else begin
+						// 	red <= tmp_color_red;
+						// 	green <= tmp_color_green;
+						// 	blue <= tmp_color_blue;
+						// end
+						// addra_9_1 <= addra_9_1 + 1;
+						// addra_0_1 <= 0;    addra_1_1 <= 0;    addra_2_1 <= 0;
+						// addra_3_1 <= 0;    addra_4_1 <= 0;    addra_5_1 <= 0;
+						// addra_6_1 <= 0;    addra_7_1 <= 0;    addra_8_1 <= 0;
+						red <= tmp_color_red;
+						green <= tmp_color_green;
+						blue <= tmp_color_blue;
 					end
 
 					default: begin 
 						red <= 4'hf; green <= 4'hf; blue <= 4'hf;
-						addra_0_1 <= 0;    
+						//addra_0_1 <= 0;    
 						addra_1_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
-						addra_4_1 <= 0;    addra_6_1 <= 0;    addra_5_1 <= 0;
-						addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+						addra_4_1 <= 0;    
+						//addra_6_1 <= 0;    addra_5_1 <= 0;
+						//addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
 					end
 				endcase
 
@@ -736,10 +867,11 @@ always @(posedge pixel_clk) begin
 
 		if( i_x == 1 && i_y == 1 )begin
 
-			addra_0_1 <= 0;    
+			//addra_0_1 <= 0;    
 			addra_1_1 <= 0;    addra_2_1 <= 0;    addra_3_1 <= 0;
-			addra_4_1 <= 0;    addra_6_1 <= 0;    addra_5_1 <= 0;
-			addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
+			addra_4_1 <= 0;    
+			//addra_6_1 <= 0;    addra_5_1 <= 0;
+			//addra_7_1 <= 0;    addra_8_1 <= 0;    addra_9_1 <= 0;
 
 			addra_0_2 <= 0;
 			addra_1_2 <= 0;    addra_2_2 <= 0;    addra_3_2 <= 0;
@@ -749,10 +881,20 @@ always @(posedge pixel_clk) begin
 			addra_c <= 0;
 			addra_w <= 0;
 			addra_f <= 0;
+
+			// addra_g1 <= 0; addra_g2 <= 0; 
+			// addra_g3 <= 0; 
+			//addra_g4 <= 0; addra_g5 <= 0;
 		end
 	end
 endcase
 	
+	// if(addra_g1 == 25600) addra_g1 = 0;
+	// if(addra_g2 == 25600) addra_g2 = 0;
+	// if(addra_g3 == 25600) addra_g3 = 0;
+	// if(addra_g4 == 25600) addra_g4 = 0;
+	// if(addra_g5 == 25600) addra_g5 = 0;
+
 	if(addra_menu == 12800) addra_menu = 0;
 	if(addra_tmp == 18200) addra_tmp = 0;
 	if(addra_camera == 18200) addra_camera = 0;
@@ -761,7 +903,7 @@ endcase
 	if(addra_f == 14400) addra_f = 0;
 	if(addra_w == 14400) addra_w = 0;
 
-	if(addra_0_1 == 9600) addra_0_1 = 0;
+	//if(addra_0_1 == 9600) addra_0_1 = 0;
 	if(addra_0_2 == 9600) addra_0_2 = 0;	
 
 	if(addra_1_1 == 9600) addra_1_1 = 0;
@@ -776,19 +918,19 @@ endcase
 	if(addra_4_1 == 9600) addra_4_1 = 0;
 	if(addra_4_2 == 9600) addra_4_2 = 0;
 
-	if(addra_5_1 == 9600) addra_5_1 = 0;
+	//if(addra_5_1 == 9600) addra_5_1 = 0;
 	if(addra_5_2 == 9600) addra_5_2 = 0;
 
-	if(addra_6_1 == 9600) addra_6_1 = 0;
+	//if(addra_6_1 == 9600) addra_6_1 = 0;
 	if(addra_6_2 == 9600) addra_6_2 = 0;	
 
-	if(addra_7_1 == 9600) addra_7_1 = 0;
+	//if(addra_7_1 == 9600) addra_7_1 = 0;
 	if(addra_7_2 == 9600) addra_7_2 = 0;
 
-	if(addra_8_1 == 9600) addra_8_1 = 0;
+	//if(addra_8_1 == 9600) addra_8_1 = 0;
 	if(addra_8_2 == 9600) addra_8_2 = 0;
 
-	if(addra_9_1 == 9600) addra_9_1 = 0;
+	//if(addra_9_1 == 9600) addra_9_1 = 0;
 	if(addra_9_2 == 9600) addra_9_2 = 0;
 
 

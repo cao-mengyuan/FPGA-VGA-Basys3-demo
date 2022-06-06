@@ -50,12 +50,12 @@ always @* begin
         end
         menu: begin
             if(remote_data == 8'b0000_1100) next_state = working;
-            // else if(remote_data == 8'b0100_0101) next_state = shutdown;
+            else if(remote_data == 8'b0100_0101) next_state = shutdown;
             else next_state = menu;
         end
         working: begin
             if(remote_data == 8'b0100_0101) next_state = shutdown;
-            else if(remote_data == 8'b0100_0011) next_state = menu;
+            else if(remote_data == 8'b0100_0011 || remote_data == 8'b0100_0111) next_state = menu;
             else next_state = working;
         end
         default: next_state = shutdown;

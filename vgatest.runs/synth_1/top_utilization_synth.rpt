@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Jun  1 12:41:14 2022
+| Date         : Mon Jun  6 22:55:13 2022
 | Host         : LAPTOP-NCO9BMV1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  772 |     0 |     20800 |  3.71 |
-|   LUT as Logic          |  772 |     0 |     20800 |  3.71 |
+| Slice LUTs*             |  674 |     0 |     20800 |  3.24 |
+|   LUT as Logic          |  674 |     0 |     20800 |  3.24 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  610 |     0 |     41600 |  1.47 |
-|   Register as Flip Flop |  610 |     0 |     41600 |  1.47 |
+| Slice Registers         |  526 |     0 |     41600 |  1.26 |
+|   Register as Flip Flop |  526 |     0 |     41600 |  1.26 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 5     |          Yes |           - |          Set |
 | 118   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 487   |          Yes |       Reset |            - |
+| 403   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,16 +149,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  487 |        Flop & Latch |
-| LUT6     |  367 |                 LUT |
-| LUT4     |  222 |                 LUT |
-| LUT2     |  163 |                 LUT |
-| CARRY4   |  123 |          CarryLogic |
+| FDRE     |  403 |        Flop & Latch |
+| LUT6     |  267 |                 LUT |
+| LUT2     |  178 |                 LUT |
+| LUT3     |  172 |                 LUT |
+| LUT4     |  128 |                 LUT |
 | FDCE     |  118 |        Flop & Latch |
-| LUT3     |   88 |                 LUT |
-| LUT5     |   75 |                 LUT |
+| CARRY4   |   99 |          CarryLogic |
+| LUT5     |   81 |                 LUT |
 | OBUF     |   31 |                  IO |
-| LUT1     |   12 |                 LUT |
+| LUT1     |   10 |                 LUT |
 | FDPE     |    5 |        Flop & Latch |
 | BUFG     |    5 |               Clock |
 | IBUF     |    4 |                  IO |
@@ -172,16 +172,16 @@ Table of Contents
 +---------------+------+
 |    Ref Name   | Used |
 +---------------+------+
-| number9       |    2 |
-| number8       |    2 |
-| number7       |    2 |
-| number6       |    2 |
-| number5       |    2 |
 | number4       |    2 |
 | number3       |    2 |
 | number2       |    2 |
 | number1       |    2 |
-| number0       |    2 |
+| number9       |    1 |
+| number8       |    1 |
+| number7       |    1 |
+| number6       |    1 |
+| number5       |    1 |
+| number0       |    1 |
 | menu          |    1 |
 | blk_mem_gen_3 |    1 |
 | blk_mem_gen_1 |    1 |

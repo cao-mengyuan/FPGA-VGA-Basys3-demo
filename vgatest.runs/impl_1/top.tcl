@@ -65,7 +65,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -88,9 +87,9 @@ set rc [catch {
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8.xci
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0.xci
   read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1.xci
-  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/menu/menu.xci
-  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Temperature/Temperature.xci
-  read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Camera/Camera.xci
+  read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/menu/menu.xci
+  read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Temperature/Temperature.xci
+  read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/Camera/Camera.xci
   read_xdc E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

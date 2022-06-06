@@ -51,7 +51,8 @@ clock_vga mod1(
 	.o_next_y(y),
 	.o_disp_en(dsp_en)
 );
-
+// reg [2:0] gif_num = 1;
+// wire [2:0] gif_num ;
 imageGenerator mod2(
 	.current_state(current_state),
 
@@ -59,6 +60,8 @@ imageGenerator mod2(
 	.is_warning(Is_warning),
 	.tens(Tens),
 	.ones(Ones),
+
+	// .gif_num      (gif_num),
 
 	.i_clk(CLK100MHZ),
 	.i_x(x),
@@ -134,5 +137,9 @@ process_infrared pi(
 	.state(current_state)
 );
 
+// control_gif cg(
+// 	.clk    (CLK100MHZ),
+// 	.gif_num(gif_num)
+// );
 
 endmodule
