@@ -63,6 +63,9 @@ read_verilog -library xil_defaultlib {
   E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_change.v
   E:/vivado_files/vgatest/vgatest.src/sources/top.v
 }
+read_ip -quiet e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/gif3_2/gif3.xci
+set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/gif3_2/gif3_ooc.xdc]
+
 read_ip -quiet E:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3.xci
 set_property used_in_implementation false [get_files -all e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3_ooc.xdc]
 

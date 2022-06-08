@@ -22,6 +22,7 @@
 
 module process_infrared(
     input [7:0] remote_data,
+    // output reg Is_F = 0,
     // input remote_done,
 
     input rst_n,
@@ -33,6 +34,7 @@ localparam [2:0]
     shutdown = 3'b000,
     menu_tmp = 3'b001,
     working  = 3'b010,
+    // working_f= 3'b100,
     menu_cam = 3'b011,
     show_pic = 3'b111;
 
@@ -76,6 +78,7 @@ always @* begin
         working: begin
             if(remote_data == btn_power) next_state = shutdown;
             else if(remote_data == btn_menu || remote_data == btn_back) next_state = menu_tmp;
+            // else if(remote_data == btn_continue) begin next_state = working; Is_F = 1; end
             else next_state = working;
         end
         show_pic: begin

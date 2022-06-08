@@ -62,6 +62,9 @@ imageGenerator mod2(
 	.ones(Ones),
 
 	// .gif_num      (gif_num),
+	// .tmp_color_red  (tmp_color_red),
+	// .tmp_color_blue (tmp_color_blue),
+	// .tmp_color_green(tmp_color_green),
 
 	.i_clk(CLK100MHZ),
 	.i_x(x),
@@ -82,6 +85,7 @@ calcu_tmp ct(
 
 tmp_bcd tb(
 	.clk(CLK100MHZ),
+	// .Is_F(Is_F),
 	.tmp(tmp),
 	.tens(Tens),
 	.ones(Ones)
@@ -112,6 +116,9 @@ i2c_dri inst_i2c_dri
 tmp_change tc(
 	.clk(CLK100MHZ),
 	.tmp(tmp),
+	// .tmp_color_red  (tmp_color_red),
+	// .tmp_color_blue (tmp_color_blue),
+	// .tmp_color_green(tmp_color_green),
 	.data(data)
 );
 
@@ -128,10 +135,12 @@ red_receive rr(
 
 
 // wire [2:0] current_state;
+wire Is_F = 0;
 
 process_infrared pi(
 	.clk  (CLK100MHZ),
 	.rst_n(rst_n),
+	// .Is_F       (Is_F),
 	.remote_data(remote_data),
 	// .remote_done(remote_done),
 	.state(current_state)
@@ -140,6 +149,14 @@ process_infrared pi(
 // control_gif cg(
 // 	.clk    (CLK100MHZ),
 // 	.gif_num(gif_num)
+// );
+
+// cal_color cc(
+// 	.clk            (CLK100MHZ),
+// 	.data           (data),
+// 	.tmp_color_red  (tmp_color_red),
+// 	.tmp_color_blue (tmp_color_blue),
+// 	.tmp_color_green(tmp_color_green)
 // );
 
 endmodule

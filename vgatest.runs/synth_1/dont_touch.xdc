@@ -3,5 +3,8 @@
 
 # XDC: E:/vivado_files/vgatest/vgatest.src/constraints/basys3_vga.xdc
 
+# IP: ip/gif3_2/gif3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==gif3 || ORIG_REF_NAME==gif3} -quiet] -quiet
+
 # IP: ip/blk_mem_gen_3_1/blk_mem_gen_3.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_3 || ORIG_REF_NAME==blk_mem_gen_3} -quiet] -quiet

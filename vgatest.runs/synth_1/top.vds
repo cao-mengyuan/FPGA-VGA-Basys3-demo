@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jun  7 01:10:49 2022
-# Process ID: 15020
+# Start of session at: Wed Jun  8 12:08:05 2022
+# Process ID: 15148
 # Current directory: E:/vivado_files/vgatest/vgatest.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: E:/vivado_files/vgatest/vgatest.runs/synth_1/top.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10704 
+INFO: Helper process launched with PID 9900 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 426.508 ; gain = 105.066
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 427.031 ; gain = 105.082
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
 INFO: [Synth 8-6157] synthesizing module 'clock_vga' [E:/vivado_files/vgatest/vgatest.src/sources/clock_vga.v:3]
@@ -33,9 +33,6 @@ INFO: [Synth 8-6155] done synthesizing module 'clock_vga' (1#1) [E:/vivado_files
 INFO: [Synth 8-6157] synthesizing module 'imageGenerator' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1]
 	Parameter display_x bound to: 640 - type: integer 
 	Parameter display_y bound to: 480 - type: integer 
-	Parameter tmp_color_blue bound to: 4'b1111 
-	Parameter tmp_color_red bound to: 4'b1111 
-	Parameter tmp_color_green bound to: 4'b1111 
 	Parameter chosen_color_red bound to: 4'b0000 
 	Parameter chosen_color_green bound to: 4'b0000 
 	Parameter chosen_color_blue bound to: 4'b1100 
@@ -44,78 +41,89 @@ INFO: [Synth 8-6157] synthesizing module 'imageGenerator' [E:/vivado_files/vgate
 	Parameter working bound to: 3'b010 
 	Parameter menu_cam bound to: 3'b011 
 	Parameter show_pic bound to: 3'b111 
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (2#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:39]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (3#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:46]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (4#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_3' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:55]
-INFO: [Synth 8-6157] synthesizing module 'number0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number0' (5#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number1' (6#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number2' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number2' (7#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number3' (8#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number4' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number4' (9#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number5' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number5' (10#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number6' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number6' (11#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number7' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number7' (12#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number8' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number8' (13#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'number9' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'number9' (14#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'menu' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/menu_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'menu' (15#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/menu_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Camera' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/Camera_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Camera' (16#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/Camera_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Temperature' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/Temperature_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Temperature' (17#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15020-LAPTOP-NCO9BMV1/realtime/Temperature_stub.v:6]
-WARNING: [Synth 8-6090] variable 'addra_menu' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:444]
-WARNING: [Synth 8-6090] variable 'addra_tmp' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:460]
-WARNING: [Synth 8-6090] variable 'addra_camera' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:473]
-WARNING: [Synth 8-6090] variable 'addra_menu' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:503]
-WARNING: [Synth 8-6090] variable 'addra_tmp' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:519]
-WARNING: [Synth 8-6090] variable 'addra_camera' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:532]
-WARNING: [Synth 8-6090] variable 'addra_w' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:956]
-WARNING: [Synth 8-6090] variable 'addra_f' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:957]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:416]
-WARNING: [Synth 8-6090] variable 'addra_menu' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:972]
-WARNING: [Synth 8-6090] variable 'addra_tmp' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:973]
-WARNING: [Synth 8-6090] variable 'addra_camera' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:974]
-WARNING: [Synth 8-6090] variable 'addra_c' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:976]
-WARNING: [Synth 8-6090] variable 'addra_f' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:977]
-WARNING: [Synth 8-6090] variable 'addra_w' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:978]
-WARNING: [Synth 8-6090] variable 'addra_0_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:981]
-WARNING: [Synth 8-6090] variable 'addra_1_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:983]
-WARNING: [Synth 8-6090] variable 'addra_1_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:984]
-WARNING: [Synth 8-6090] variable 'addra_2_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:986]
-WARNING: [Synth 8-6090] variable 'addra_2_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:987]
-WARNING: [Synth 8-6090] variable 'addra_3_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:989]
-WARNING: [Synth 8-6090] variable 'addra_3_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:990]
-WARNING: [Synth 8-6090] variable 'addra_4_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:992]
-WARNING: [Synth 8-6090] variable 'addra_4_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:993]
-WARNING: [Synth 8-6090] variable 'addra_5_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:996]
-WARNING: [Synth 8-6090] variable 'addra_6_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:999]
-WARNING: [Synth 8-6090] variable 'addra_7_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1002]
-WARNING: [Synth 8-6090] variable 'addra_8_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1005]
-WARNING: [Synth 8-6090] variable 'addra_9_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1008]
-INFO: [Synth 8-6155] done synthesizing module 'imageGenerator' (18#1) [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (2#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_0' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:42]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (3#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_1_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:49]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (4#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/blk_mem_gen_3_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_3' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:58]
+INFO: [Synth 8-6157] synthesizing module 'gif3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/gif3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'gif3' (5#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/gif3_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (15) of module 'gif3' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:90]
+WARNING: [Synth 8-689] width (13) of port connection 'douta' does not match port width (12) of module 'gif3' [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:91]
+INFO: [Synth 8-6157] synthesizing module 'number0' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number0' (6#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number1' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number1' (7#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number2' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number2' (8#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number3' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number3' (9#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number4' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number4' (10#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number5' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number5' (11#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number6' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number6' (12#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number7' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number7' (13#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number8' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number8' (14#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'number9' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'number9' (15#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/number9_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'menu' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/menu_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'menu' (16#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/menu_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Camera' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/Camera_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Camera' (17#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/Camera_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Temperature' [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/Temperature_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Temperature' (18#1) [E:/vivado_files/vgatest/vgatest.runs/synth_1/.Xil/Vivado-15148-LAPTOP-NCO9BMV1/realtime/Temperature_stub.v:6]
+WARNING: [Synth 8-6090] variable 'addra_menu' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:524]
+WARNING: [Synth 8-6090] variable 'addra_tmp' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:540]
+WARNING: [Synth 8-6090] variable 'addra_camera' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:553]
+WARNING: [Synth 8-6090] variable 'addra_menu' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:583]
+WARNING: [Synth 8-6090] variable 'addra_tmp' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:599]
+WARNING: [Synth 8-6090] variable 'addra_camera' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:612]
+WARNING: [Synth 8-6090] variable 'addra_g3' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:631]
+WARNING: [Synth 8-6090] variable 'addra_w' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1049]
+WARNING: [Synth 8-6090] variable 'addra_f' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1050]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:496]
+WARNING: [Synth 8-6090] variable 'addra_g3' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1061]
+WARNING: [Synth 8-6090] variable 'addra_menu' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1065]
+WARNING: [Synth 8-6090] variable 'addra_tmp' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1066]
+WARNING: [Synth 8-6090] variable 'addra_camera' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1067]
+WARNING: [Synth 8-6090] variable 'addra_c' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1069]
+WARNING: [Synth 8-6090] variable 'addra_f' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1070]
+WARNING: [Synth 8-6090] variable 'addra_w' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1071]
+WARNING: [Synth 8-6090] variable 'addra_0_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1074]
+WARNING: [Synth 8-6090] variable 'addra_1_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1076]
+WARNING: [Synth 8-6090] variable 'addra_1_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1077]
+WARNING: [Synth 8-6090] variable 'addra_2_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1079]
+WARNING: [Synth 8-6090] variable 'addra_2_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1080]
+WARNING: [Synth 8-6090] variable 'addra_3_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1082]
+WARNING: [Synth 8-6090] variable 'addra_3_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1083]
+WARNING: [Synth 8-6090] variable 'addra_4_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1085]
+WARNING: [Synth 8-6090] variable 'addra_4_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1086]
+WARNING: [Synth 8-6090] variable 'addra_5_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1088]
+WARNING: [Synth 8-6090] variable 'addra_5_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1089]
+WARNING: [Synth 8-6090] variable 'addra_6_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1091]
+WARNING: [Synth 8-6090] variable 'addra_6_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1092]
+WARNING: [Synth 8-6090] variable 'addra_7_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1094]
+WARNING: [Synth 8-6090] variable 'addra_7_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1095]
+WARNING: [Synth 8-6090] variable 'addra_8_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1097]
+WARNING: [Synth 8-6090] variable 'addra_8_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1098]
+WARNING: [Synth 8-6090] variable 'addra_9_1' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1100]
+WARNING: [Synth 8-6090] variable 'addra_9_2' is written by both blocking and non-blocking assignments, entire logic could be removed [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1101]
+INFO: [Synth 8-6155] done synthesizing module 'imageGenerator' (19#1) [E:/vivado_files/vgatest/vgatest.src/sources/image_generator.v:1]
 WARNING: [Synth 8-350] instance 'mod2' of module 'imageGenerator' requires 12 connections, but only 11 given [E:/vivado_files/vgatest/vgatest.src/sources/top.v:56]
 INFO: [Synth 8-6157] synthesizing module 'calcu_tmp' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v:23]
 	Parameter Warning_threshold bound to: 8'b00011110 
 	Parameter Fire_threshold bound to: 8'b00100000 
-INFO: [Synth 8-6155] done synthesizing module 'calcu_tmp' (19#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'calcu_tmp' (20#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/calcu_tmp.v:23]
 INFO: [Synth 8-6157] synthesizing module 'tmp_bcd' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'tmp_bcd' (20#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'tmp_bcd' (21#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_bcd.v:23]
 INFO: [Synth 8-6157] synthesizing module 'i2c_dri' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/i2c_dri.v:35]
 	Parameter st_0 bound to: 8'b00000001 
 	Parameter st_1 bound to: 8'b00000010 
@@ -127,10 +135,10 @@ INFO: [Synth 8-6157] synthesizing module 'i2c_dri' [E:/vivado_files/vgatest/vgat
 	Parameter st_7 bound to: 8'b10000000 
 INFO: [Synth 8-155] case statement is not full and has no default [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/i2c_dri.v:238]
 WARNING: [Synth 8-5788] Register slave_address_reg_reg in module i2c_dri is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/i2c_dri.v:250]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_dri' (21#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/i2c_dri.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_dri' (22#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/i2c_dri.v:35]
 INFO: [Synth 8-6157] synthesizing module 'tmp_change' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_change.v:23]
 	Parameter divider bound to: 20000000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'tmp_change' (22#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_change.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'tmp_change' (23#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/tmp_change.v:23]
 INFO: [Synth 8-6157] synthesizing module 'red_receive' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/red_receive.v:26]
 	Parameter IDLE bound to: 6'b000000 
 	Parameter START_9MS bound to: 6'b000001 
@@ -143,7 +151,7 @@ INFO: [Synth 8-6157] synthesizing module 'red_receive' [E:/vivado_files/vgatest/
 	Parameter TIME_5MS bound to: 20'b00111101000010010000 
 	Parameter TIME_1_4MS bound to: 20'b00010001000101110000 
 	Parameter TIME_3MS bound to: 20'b00100100100111110000 
-INFO: [Synth 8-6155] done synthesizing module 'red_receive' (23#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/red_receive.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'red_receive' (24#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/red_receive.v:26]
 INFO: [Synth 8-6157] synthesizing module 'process_infrared' [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/process_infrared.v:23]
 	Parameter shutdown bound to: 3'b000 
 	Parameter menu_tmp bound to: 3'b001 
@@ -158,14 +166,14 @@ INFO: [Synth 8-6157] synthesizing module 'process_infrared' [E:/vivado_files/vga
 	Parameter btn_minus bound to: 8'b00011001 
 	Parameter btn_1 bound to: 8'b00001100 
 	Parameter btn_2 bound to: 8'b00011000 
-INFO: [Synth 8-6155] done synthesizing module 'process_infrared' (24#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/process_infrared.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'top' (25#1) [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'process_infrared' (25#1) [E:/vivado_files/vgatest/vgatest.srcs/sources_1/new/process_infrared.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (26#1) [E:/vivado_files/vgatest/vgatest.src/sources/top.v:2]
 WARNING: [Synth 8-3331] design tmp_bcd has unconnected port tmp[7]
 WARNING: [Synth 8-3331] design imageGenerator has unconnected port gif_num[2]
 WARNING: [Synth 8-3331] design imageGenerator has unconnected port gif_num[1]
 WARNING: [Synth 8-3331] design imageGenerator has unconnected port gif_num[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 487.766 ; gain = 166.324
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 492.949 ; gain = 171.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -178,16 +186,18 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 487.766 ; gain = 166.324
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 492.949 ; gain = 171.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 487.766 ; gain = 166.324
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 492.949 ; gain = 171.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/gif3_2/gif3/Gif3_in_context.xdc] for cell 'mod2/g3'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/gif3_2/gif3/Gif3_in_context.xdc] for cell 'mod2/g3'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'mod2/centigrade'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_3_1/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'mod2/centigrade'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/blk_mem_gen_0_3/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'mod2/fire'
@@ -198,6 +208,8 @@ Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/numb
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4/number4_in_context.xdc] for cell 'mod2/num4_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4/number4_in_context.xdc] for cell 'mod2/num4_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number4/number4/number4_in_context.xdc] for cell 'mod2/num4_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number9/number9/number9_in_context.xdc] for cell 'mod2/num9_2'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number2/number2/number2_in_context.xdc] for cell 'mod2/num2_1'
@@ -208,14 +220,24 @@ Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/numb
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3/number3_in_context.xdc] for cell 'mod2/num3_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3/number3_in_context.xdc] for cell 'mod2/num3_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number3/number3/number3_in_context.xdc] for cell 'mod2/num3_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5/number5_in_context.xdc] for cell 'mod2/num5_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5/number5_in_context.xdc] for cell 'mod2/num5_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5/number5_in_context.xdc] for cell 'mod2/num5_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number5/number5/number5_in_context.xdc] for cell 'mod2/num5_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6/number6_in_context.xdc] for cell 'mod2/num6_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6/number6_in_context.xdc] for cell 'mod2/num6_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6/number6_in_context.xdc] for cell 'mod2/num6_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number6/number6/number6_in_context.xdc] for cell 'mod2/num6_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7/number7_in_context.xdc] for cell 'mod2/num7_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7/number7_in_context.xdc] for cell 'mod2/num7_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7/number7_in_context.xdc] for cell 'mod2/num7_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number7/number7/number7_in_context.xdc] for cell 'mod2/num7_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8/number8_in_context.xdc] for cell 'mod2/num8_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8/number8_in_context.xdc] for cell 'mod2/num8_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8/number8_in_context.xdc] for cell 'mod2/num8_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number8/number8/number8_in_context.xdc] for cell 'mod2/num8_2'
+Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0/number0_in_context.xdc] for cell 'mod2/num0_1'
+Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0/number0_in_context.xdc] for cell 'mod2/num0_1'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0/number0_in_context.xdc] for cell 'mod2/num0_2'
 Finished Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number0/number0/number0_in_context.xdc] for cell 'mod2/num0_2'
 Parsing XDC File [e:/vivado_files/vgatest/vgatest.srcs/sources_1/ip/number1/number1/number1_in_context.xdc] for cell 'mod2/num1_1'
@@ -234,42 +256,49 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [E:/vivado_files/vgatest/vgatest.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [E:/vivado_files/vgatest/vgatest.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 830.277 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 835.348 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 830.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 835.355 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 830.332 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 830.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.355 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 835.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 830.332 ; gain = 508.891
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 835.355 ; gain = 513.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 830.332 ; gain = 508.891
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 835.355 ; gain = 513.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for mod2/g3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/centigrade. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/fire. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/warning. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num4_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num4_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num9_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num9_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num2_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num2_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num3_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num3_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num5_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num5_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num6_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num6_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num7_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num7_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num8_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num8_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mod2/num0_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num0_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num1_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/num1_2. (constraint file  auto generated constraint, line ).
@@ -277,12 +306,24 @@ Applied set_property DONT_TOUCH = true for mod2/menu_1. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for mod2/temperature_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mod2/camera_1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 830.332 ; gain = 508.891
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 835.355 ; gain = 513.406
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "tmp_color_red" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_red" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_green" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_green" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_blue" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_blue" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "red0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "addra_1_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_2_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_3_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_4_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_5_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_6_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_7_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_8_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_9_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_0_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_1_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_2_2" won't be mapped to RAM because it is too sparse
@@ -294,10 +335,22 @@ INFO: [Synth 8-5546] ROM "addra_7_2" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "addra_8_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_9_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tmp_color_red" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_red" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_green" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_green" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_blue" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_color_blue" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "red0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "addra_1_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_2_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_3_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_4_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_5_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_6_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_7_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_8_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_9_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_0_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_1_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_2_2" won't be mapped to RAM because it is too sparse
@@ -309,11 +362,11 @@ INFO: [Synth 8-5546] ROM "addra_7_2" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "addra_8_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_9_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_c" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "red" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "blue" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addra_0_1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'i2c_dri'
 INFO: [Synth 8-5546] ROM "dri_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "scl" won't be mapped to RAM because it is too sparse
@@ -389,7 +442,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_c_reg' using encodin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'process_infrared'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 830.332 ; gain = 508.891
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 835.355 ; gain = 513.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -404,8 +457,9 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     28 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 1     
 	   2 Input     15 Bit       Adders := 2     
-	   2 Input     14 Bit       Adders := 15    
+	   2 Input     14 Bit       Adders := 20    
 	   2 Input     11 Bit       Adders := 3     
 	   2 Input     10 Bit       Adders := 2     
 	   2 Input      7 Bit       Adders := 2     
@@ -413,27 +467,29 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 	               28 Bit    Registers := 1     
 	               17 Bit    Registers := 3     
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	               15 Bit    Registers := 2     
-	               14 Bit    Registers := 15    
+	               14 Bit    Registers := 21    
 	               11 Bit    Registers := 3     
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 5     
 	                7 Bit    Registers := 3     
-	                4 Bit    Registers := 5     
+	                4 Bit    Registers := 8     
 	                1 Bit    Registers := 28    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     28 Bit        Muxes := 1     
-	   7 Input     17 Bit        Muxes := 1     
 	   6 Input     17 Bit        Muxes := 15    
 	   2 Input     17 Bit        Muxes := 14    
+	   7 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 8     
+	   6 Input     16 Bit        Muxes := 7     
 	   2 Input     15 Bit        Muxes := 25    
 	   6 Input     15 Bit        Muxes := 15    
-	   6 Input     14 Bit        Muxes := 30    
-	  11 Input     14 Bit        Muxes := 14    
+	   2 Input     14 Bit        Muxes := 23    
+	   6 Input     14 Bit        Muxes := 35    
 	   5 Input     14 Bit        Muxes := 4     
-	   2 Input     14 Bit        Muxes := 8     
+	  11 Input     14 Bit        Muxes := 19    
 	   2 Input     11 Bit        Muxes := 1     
 	  22 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
@@ -449,18 +505,20 @@ Detailed RTL Component Info :
 	   5 Input      5 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 16    
 	   3 Input      5 Bit        Muxes := 2     
-	  11 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 18    
-	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 78    
 	   3 Input      4 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 3     
+	   9 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 2     
 	   5 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 31    
-	   2 Input      1 Bit        Muxes := 49    
+	   2 Input      1 Bit        Muxes := 75    
+	   5 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 35    
+	  11 Input      1 Bit        Muxes := 9     
 	   7 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 4     
-	  11 Input      1 Bit        Muxes := 4     
+	  19 Input      1 Bit        Muxes := 1     
 	  31 Input      1 Bit        Muxes := 6     
 	  29 Input      1 Bit        Muxes := 6     
 	  33 Input      1 Bit        Muxes := 4     
@@ -492,34 +550,40 @@ Module imageGenerator
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     17 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 1     
 	   2 Input     15 Bit       Adders := 2     
-	   2 Input     14 Bit       Adders := 15    
+	   2 Input     14 Bit       Adders := 20    
 +---Registers : 
 	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
 	               15 Bit    Registers := 2     
-	               14 Bit    Registers := 15    
-	                4 Bit    Registers := 3     
+	               14 Bit    Registers := 21    
+	                4 Bit    Registers := 6     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   7 Input     17 Bit        Muxes := 1     
 	   6 Input     17 Bit        Muxes := 15    
 	   2 Input     17 Bit        Muxes := 14    
+	   7 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 8     
+	   6 Input     16 Bit        Muxes := 7     
 	   2 Input     15 Bit        Muxes := 25    
 	   6 Input     15 Bit        Muxes := 15    
-	   6 Input     14 Bit        Muxes := 30    
-	  11 Input     14 Bit        Muxes := 14    
+	   2 Input     14 Bit        Muxes := 23    
+	   6 Input     14 Bit        Muxes := 35    
 	   5 Input     14 Bit        Muxes := 4     
-	   2 Input     14 Bit        Muxes := 8     
-	  11 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 12    
-	   4 Input      4 Bit        Muxes := 2     
+	  11 Input     14 Bit        Muxes := 19    
+	   2 Input      4 Bit        Muxes := 72    
 	   3 Input      4 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 3     
-	   6 Input      1 Bit        Muxes := 26    
-	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      4 Bit        Muxes := 3     
+	   9 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 41    
+	   5 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 30    
+	  11 Input      1 Bit        Muxes := 9     
 	   7 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 4     
-	  11 Input      1 Bit        Muxes := 4     
+	  19 Input      1 Bit        Muxes := 1     
 Module calcu_tmp 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -610,7 +674,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "addra_c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_1_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_2_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_3_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_4_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_5_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_6_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_7_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_8_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_9_1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_0_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_1_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_2_2" won't be mapped to RAM because it is too sparse
@@ -621,10 +693,7 @@ INFO: [Synth 8-5546] ROM "addra_6_2" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "addra_7_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_8_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addra_9_2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "addra_1_1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "addra_2_1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "addra_3_1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "addra_4_1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addra_c" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "inst_i2c_dri/scl" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5587] ROM size for "inst_i2c_dri/sda_out" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "inst_i2c_dri/sda_dir" won't be mapped to RAM because it is too sparse
@@ -673,7 +742,7 @@ INFO: [Synth 8-3886] merging instance 'inst_i2c_dri/slave_address_reg_reg[4]' (F
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_i2c_dri/slave_address_reg_reg[5] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_i2c_dri/slave_address_reg_reg[6] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 830.332 ; gain = 508.891
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 835.355 ; gain = 513.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -702,13 +771,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 830.332 ; gain = 508.891
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 835.355 ; gain = 513.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 840.301 ; gain = 518.859
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 846.062 ; gain = 524.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -720,7 +789,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -744,7 +813,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -757,7 +826,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -769,25 +838,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -800,19 +869,20 @@ Report BlackBoxes:
 |1     |blk_mem_gen_0 |         1|
 |2     |blk_mem_gen_1 |         1|
 |3     |blk_mem_gen_3 |         1|
-|4     |number0       |         1|
-|5     |number1       |         2|
-|6     |number2       |         2|
-|7     |number3       |         2|
-|8     |number4       |         2|
-|9     |number5       |         1|
-|10    |number6       |         1|
-|11    |number7       |         1|
-|12    |number8       |         1|
-|13    |number9       |         1|
-|14    |menu          |         1|
-|15    |Camera        |         1|
-|16    |Temperature   |         1|
+|4     |gif3          |         1|
+|5     |number0       |         2|
+|6     |number1       |         2|
+|7     |number2       |         2|
+|8     |number3       |         2|
+|9     |number4       |         2|
+|10    |number5       |         2|
+|11    |number6       |         2|
+|12    |number7       |         2|
+|13    |number8       |         2|
+|14    |number9       |         2|
+|15    |menu          |         1|
+|16    |Camera        |         1|
+|17    |Temperature   |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -824,75 +894,82 @@ Report Cell Usage:
 |3     |blk_mem_gen_0 |     1|
 |4     |blk_mem_gen_1 |     1|
 |5     |blk_mem_gen_3 |     1|
-|6     |menu          |     1|
-|7     |number0       |     1|
-|8     |number1       |     1|
-|9     |number1__2    |     1|
-|10    |number2       |     1|
-|11    |number2__2    |     1|
-|12    |number3       |     1|
-|13    |number3__2    |     1|
-|14    |number4       |     1|
-|15    |number4__2    |     1|
-|16    |number5       |     1|
-|17    |number6       |     1|
-|18    |number7       |     1|
-|19    |number8       |     1|
-|20    |number9       |     1|
-|21    |BUFG          |     5|
-|22    |CARRY4        |    99|
-|23    |LUT1          |    12|
-|24    |LUT2          |   190|
-|25    |LUT3          |    99|
-|26    |LUT4          |   138|
-|27    |LUT5          |   146|
-|28    |LUT6          |   275|
-|29    |FDCE          |   118|
-|30    |FDPE          |     5|
-|31    |FDRE          |   395|
-|32    |FDSE          |    11|
-|33    |IBUF          |     3|
-|34    |IOBUF         |     1|
-|35    |OBUF          |    31|
+|6     |gif3          |     1|
+|7     |menu          |     1|
+|8     |number0       |     1|
+|9     |number0__2    |     1|
+|10    |number1       |     1|
+|11    |number1__2    |     1|
+|12    |number2       |     1|
+|13    |number2__2    |     1|
+|14    |number3       |     1|
+|15    |number3__2    |     1|
+|16    |number4       |     1|
+|17    |number4__2    |     1|
+|18    |number5       |     1|
+|19    |number5__2    |     1|
+|20    |number6       |     1|
+|21    |number6__2    |     1|
+|22    |number7       |     1|
+|23    |number7__2    |     1|
+|24    |number8       |     1|
+|25    |number8__2    |     1|
+|26    |number9       |     1|
+|27    |number9__2    |     1|
+|28    |BUFG          |     5|
+|29    |CARRY4        |   123|
+|30    |LUT1          |    16|
+|31    |LUT2          |   189|
+|32    |LUT3          |   138|
+|33    |LUT4          |   168|
+|34    |LUT5          |   120|
+|35    |LUT6          |   381|
+|36    |FDCE          |   118|
+|37    |FDPE          |     5|
+|38    |FDRE          |   491|
+|39    |FDSE          |    13|
+|40    |IBUF          |     3|
+|41    |IOBUF         |     1|
+|42    |OBUF          |    31|
 +------+--------------+------+
 
 Report Instance Areas: 
 +------+---------------+-----------------+------+
 |      |Instance       |Module           |Cells |
 +------+---------------+-----------------+------+
-|1     |top            |                 |  1570|
+|1     |top            |                 |  1862|
 |2     |  ct           |calcu_tmp        |    46|
 |3     |  inst_i2c_dri |i2c_dri          |   145|
-|4     |  mod1         |clock_vga        |   194|
-|5     |  mod2         |imageGenerator   |   647|
-|6     |  pi           |process_infrared |    98|
+|4     |  mod1         |clock_vga        |   231|
+|5     |  mod2         |imageGenerator   |   822|
+|6     |  pi           |process_infrared |    64|
 |7     |  rr           |red_receive      |   212|
-|8     |  tb           |tmp_bcd          |   123|
+|8     |  tb           |tmp_bcd          |   237|
 |9     |  tc           |tmp_change       |    64|
 +------+---------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 856.266 ; gain = 192.258
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 856.266 ; gain = 534.824
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 867.094 ; gain = 202.738
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 867.094 ; gain = 545.145
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 100 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 124 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 856.266 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 867.094 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-201 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+232 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 856.266 ; gain = 546.859
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 856.266 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 867.094 ; gain = 557.598
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 867.094 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'E:/vivado_files/vgatest/vgatest.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  7 01:11:39 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  8 12:08:47 2022...
